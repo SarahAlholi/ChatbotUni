@@ -1,0 +1,1502 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hello sarah 
+    - hi Sarah
+    - hello assistant
+    - hey chatbot
+    - hello bot 
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - ok
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - good
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: compliment 
+  examples: | 
+    - love u
+    - i love you
+    - Iloveyou
+    - u are great
+    - u re ausome 
+    - you are amazing
+    - u look nice 
+
+- intent: thanking 
+  examples: | 
+    - Thank you 
+    - thanks 
+    - Thanx
+    - thank u
+    - thankyou alot
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - I hate you
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you ?
+    - what is your name ?
+
+- intent: ask_bot
+  examples: |
+    - How are you?
+    - how r u
+    - r u good?
+    - hope you are good?
+    - how you are doing?
+    - how's everything?
+    - hope you are well?
+
+- intent: give_time
+  examples: |
+    - can you tell me what time it is
+    - tell me the time
+    - got the time
+    - what time is it
+
+- intent: career_advisor
+  examples: |
+    - I want advice for my career
+    - career advisor
+    - advice what to have as a career
+    - what may be suitable for me as a career
+    - Can you advice me what to study 
+    - advice
+    - career
+
+- intent: career_advisor_science
+  examples: |
+    - Science 
+    - I like Sciences
+    - I am intrested in Science subjects
+    - specialized in science
+
+- intent: career_advisor_management
+  examples: |
+    - management 
+    - I like management
+    - I am intrested in management subjects
+    - specialized in management
+
+- intent: career_advisor_Art_Human
+  examples: |
+    - Art
+    - art and humanities 
+    - I like Art and Human
+    - I am intrested in Art and Human subjects
+    - specialized in Art and Human
+
+- intent: career_advisor_physics
+  examples: |
+    - I like physics
+    - physics
+    - I am good at physics
+    - physics is easy for me
+    - I love physics
+    - I find myself very good in physics classes
+    - I like physics subject
+    - physics studying 
+    - laws and calculations of physics principles
+
+- intent: career_advisor_chemistry
+  examples: |
+    - I like chemistry
+    - chemistry
+    - I am good at chemistry
+    - chemistry is easy for me
+    - I love chemistry
+    - I find myself very good in chemistry classes
+    - I like chemistry subject
+    - chemistry studying 
+    - laws and calculations of chemistry principles
+    - I like experiments
+
+- intent: career_advisor_biology
+  examples: |
+    - I like biology
+    - biology
+    - I am good at biology
+    - biology is easy for me
+    - I love biology
+    - I find myself very good in biology classes
+    - I like biology subject
+    - biology studying 
+    - laws and calculations of biology principles
+
+- intent: career_advisor_geography
+  examples: |
+    - I like geography
+    - geography
+    - I am good at geography
+    - geography is easy for me
+    - I love maps
+    - I find myself very good in geography classes
+    - I like geography subject
+    - geography studying 
+    - world experince 
+
+- intent: career_advisor_math
+  examples: |
+    - I like math
+    - math
+    - I am good at math
+    - math is easy for me
+    - I love mathmatics
+    - I find myself very good in math classes
+    - I like math subject
+    - math studying 
+    - calculations 
+
+- intent: career_advisor_IT
+  examples: |
+    - I like Computer
+    - ICT 
+    - technology
+    - I am good at ICT
+    - ICT is easy for me
+    - I love computer
+    - I find myself very good in computer classes
+    - I like cumputer subjects
+    - computer studying 
+    - computer   
+    - CS
+
+- intent: career_advisor_BM
+  examples: |
+    - I like Business
+    - Business 
+    - management and business
+    - I am good at business  
+    - I find myself very good in business classes
+    - I like business subjects
+
+- intent: career_advisor_economics
+  examples: |
+    - I like economics
+    - economics 
+    - I am good at economics  
+    - I find myself very good in economics classes
+    - I like economics subjects
+
+- intent: career_advisor_accounting_finance
+  examples: |
+    - I like accounting
+    - I like finance
+    - finance 
+    - accounting
+    - accounting and finance
+    - I am good at accounting and finance  
+    - I find myself very good in accounting classes
+    - I find myself very good in finance classes
+    - I like accounting subjects
+    - I like finance subjects
+
+- intent: career_advisor_marketing
+  examples: |
+    - I like marketing
+    - marketing 
+    - I am good at marketing  
+    - I find myself very good in marketing classes
+    - I like marketing subjects
+
+- intent: career_advisor_medicine
+  examples: |
+    - I like medicine
+    - medicine 
+    - I am good at medicine  
+    - I find myself very good in medicine classes
+    - I like medicine subjects
+    - medical
+    
+- intent: career_advisor_history
+  examples: |
+    - I like history
+    - history 
+    - I am good at history  
+    - I find myself very good in history classes
+    - I like history subjects
+    - historical
+
+- intent: career_advisor_languages
+  examples: |
+    - I like language
+    - language 
+    - I am good at language  
+    - I find myself very good in language classes
+    - I like language subjects
+    - languages
+    - lang
+    - langauges
+
+- intent: career_advisor_english
+  examples: |
+    - I like english
+    - english 
+    - I am good at english  
+    - I find myself very good in english classes
+    - I like english subjects
+
+- intent: career_advisor_english_literature
+  examples: |
+    - I like literature
+    - literature 
+    - I am good at literature  
+    - I find myself very good in literature classes
+    - I like literature subjects
+
+- intent: career_advisor_education
+  examples: |
+    - I like education
+    - education 
+    - I am good at education  
+    - I find myself very good in education classes
+    - I like education subjects
+    - teaching
+    - teach
+
+- intent: career_advisor_mediastudies
+  examples: |
+    - I like media studies
+    - media studies 
+    - I am good at social media
+    - I find myself very good in media studies classes
+    - I like media studies subjects
+    - media
+
+- intent: career_advisor_society
+  examples: |
+    - I like society studies
+    - society
+    - war
+    - I am good at society
+    - I find myself very good in society classes
+    - I like society subjects
+    - societies
+
+- intent: career_advisor_philosophy
+  examples: |
+    - I like philosophy studies
+    - philosophy studies 
+    - I am good at philosophy
+    - I find myself very good in philosophy classes
+    - I like philosophy subjects
+    - philosophy
+
+- intent: career_advisor_humanandhealthscience
+  examples: |
+    - I like human health
+    - health
+    - human health and sciences
+    - human health
+    - I want to be doctor  
+    - I want to be surgeon
+    - I am good at human health
+
+- intent: career_advisor_law
+  examples: |
+    - I like law
+    - law 
+    - Law and Criminology
+    - rules
+    - I want to be lawyer
+    - I am good at judgment 
+   
+- intent: career_advisor_engineering
+  examples: |
+    - I like engineering
+    - engineering
+    - technical engineering
+    - I want to be engineer
+    - I am good at fixing things 
+
+- intent: display_upcoming_holidays
+  examples: |
+    - events 
+    - holidays
+    - When is my next holiday
+    - I want to know about holidays
+    - Can you please tell me about upcoming holidays
+
+- intent: holiday_month
+  examples: |
+    - I would like to know about events for this month
+    - Show me this month's 
+    - month 
+    - vacations for this month 
+
+- intent: holiday_year
+  examples: |
+    - I would like to know about events for this year
+    - Show me this year's 
+    - year
+    - whole year holiday 
+    - vacations for this year  
+  
+- intent: help_desk
+  examples: |
+    - Where do I go to get information ?
+    - how to get help?
+    - help 
+    - I want help 
+    - help me please
+    - information help
+    - help desk
+    - assistant 
+    - help please 
+
+- intent: help_desk_contactus
+  examples: |
+    - contact us
+    - contact
+    - address 
+    - contact information
+    - contact numbers
+
+- intent: help_desk_contactus_staff
+  examples: |
+    - staff emails 
+    - contact staff memebers
+    - staff addresses
+    - contact information of staff 
+    - numbers of staff
+    - Who can I speak to about changing my modules?
+    - I am having problems choosing modules. Who can I speak to?
+    - I think something might be wrong with my timetable. Who can I speak to about this?
+
+
+
+- intent: help_desk_contactus_admission
+  examples: |
+    - admission emails 
+    - contact admissions
+    - admission info
+    - admission number
+    - Who can I speak to about changing my course?
+    - Am I able to bring credits with me from other University when I transfer into Swansea? 
+    - I may not be able to enroll on my course this year. What are my options?
+
+- intent: help_desk_contactus_admission_undergrad
+  examples: |
+    - undergraduate admission emails 
+    - contact admissions for undergraduate
+    - undergraduate admission info
+    - undergraduate admission query 
+    - undergrad info
+    - undergraduate
+
+- intent: help_desk_contactus_admission_postgrad
+  examples: |
+    - postgraduate admission emails 
+    - contact admissions for postgrad
+    - postgraduate admission info
+    - postgraduate admission query 
+    - postgrad info
+    - postgraduate admission
+
+- intent: help_desk_contactus_admission_international
+  examples: |
+    - international admission emails 
+    - contact admissions for international student
+    - international admission info
+    - international admission query 
+    - international info
+
+- intent: help_desk_contactus_general
+  examples: |
+    - general queries  
+    - general info
+    - general queries number
+    - general contact details 
+
+- intent: IT_support
+  examples: | 
+    - IT Support 
+    - it supp
+    - support
+    - IT services
+    - I have something not working 
+    - Remote access 
+    - can't connected to the internet 
+    - something wrong with Internet connection
+    - University Wifi connection
+    - How do I access documents in the shared drive from home?
+    - How do I connect with a work laptop?
+    - My laptop is not working. Can I get help connecting to the WiFi system?
+    - How do I set up VPN?
+    - How do I check what operating system is on my device?
+    - I have a MAC how do I remote my work PC?
+    - How do I set up the Multi Factor Authentication?
+    - I cannot log in to my Intranet/Blackboard account. Is something wrong?
+    - I have a question about Turnitin/Blackboard. Who should I contact?
+    - Can I access Office365 at home?
+
+
+- intent: IT_support_enquiry
+  examples: |
+    - IT support queries 
+    - IT support enquiry
+    - I have a query for IT support
+    - I need to apply for problem I faced 
+    - IT problem that needs to be escalated 
+    - IT problem to be solved 
+
+- intent: IT_support_details
+  examples: |
+    - IT support info
+    - IT support details 
+    - IT support contact details
+    - IT support team number
+
+- intent: help_desk_student_account
+  examples: |
+    - help with my account
+    - student account
+    - account
+    - help with student account 
+    - my account 
+    - account information
+    - How do I update my address
+
+- intent: help_desk_student_account_changePass
+  examples: |
+    - change my password 
+    - change password
+    - forget password
+    - I forgot my pass
+    - I want to rest my pass
+    - pass forget
+    - how to change my password?
+
+- intent: help_desk_covid19
+  examples: |
+    - covid 19
+    - covid
+    - covid-19
+    - covid-19 panademic help
+    - Coronavirus 
+    - corona 
+
+- intent: help_desk_new_student_account
+  examples: |
+    - help with my student account I am new student
+    - new student
+
+- intent: help_desk_student_account_FA
+  examples: |
+    - Further Assistance
+    - more help for my account
+    - account Further Assistance
+    - account more information 
+
+- intent: campus_guide
+  examples: |
+    - campus guide
+    - campus
+    - guide
+    - map 
+    - I am lost
+    - I don't know where to go 
+    - university maps 
+    - university locations
+    - address of university
+    - site of swansea university
+
+- intent: campus_guide_main
+  examples: |
+    - main guide locatins
+    - main campus guide 
+    - all campuses  
+    - where is the campuses 
+    - address of campuses
+
+- intent: campus_guide_general_BayCampus
+  examples: |
+    - Bay campus locatins
+    - bay campus
+    - bay location
+    - bay map
+    - bay address
+    - bay tour
+
+- intent: campus_guide_general_SingletonParkCampus
+  examples: |
+    - Singleton Park Campus locatins
+    - Singleton Park Campus
+    - singleton location
+    - singleton park
+    - singleton address
+    - singleton tour
+  
+- intent: colleges
+  examples: |
+    - What is the Home Colleges
+    - colleges locations
+    - colleges tour
+    - colleges building
+    - colleges
+    - address of colleges
+    - colleges site where to find building of the colleges
+    - college map 
+
+- intent: campus_guide_colleges_CS
+  examples: |
+    - computational colleges location
+    - computer sciences building 
+    - College of Science
+    - computational building
+    - address of computational building
+    - computer scinence map 
+
+- intent: campus_guide_colleges_Medical
+  examples: |
+    - Medical colleges location
+    - Medical building 
+    - College of Medical
+    - address of Medical building
+    - Medical college map 
+
+- intent: campus_guide_colleges_law
+  examples: |
+    - law colleges location
+    - law building 
+    - College of law
+    - Hillary Rodham Clinton School of Law
+    - address of law building
+    - law map 
+
+- intent: campus_guide_colleges_HHS
+  examples: |
+    - Human and Health Sciences colleges location
+    - Human and Health Sciences building 
+    - College of Human and Health Sciences
+    - Human and Health Sciences building
+    - address of Human and Health Sciences building
+    - Human and Health Sciences map 
+
+- intent: campus_guide_colleges_E
+  examples: |
+    - College of Engineering location
+    - Engineering building 
+    - College of Engineering
+    - address of Engineering building
+    - College of Engineering map 
+
+- intent: campus_guide_colleges_M
+  examples: |
+    - Management colleges location
+    - Management building 
+    - College of Management
+    - Management building
+    - address of Management building
+    - Management map 
+
+- intent: campus_guide_colleges_AH
+  examples: |
+    - College of Arts and Humanities location
+    - Arts and Humanities building 
+    - College of Arts and Humanities
+    - Art building
+    - address of Arts building
+    - College of Arts and Humanities map 
+
+- intent: campus_guide_accommodation
+  examples: |
+    - Accommodation
+    - accomndation building 
+    - where can I find the Accommodation
+    - address of accommodation
+    - Where can I find out about halls of residence?
+    - where to stay
+    - student dorms
+    - place for living 
+
+- intent: campus_guide_accommodation_singleton
+  examples: |
+    - singleton Accommodation
+    - accomndation building in singleton campus
+    - where can I find the Accommodation in singleton park campus
+    - address of accommodation singleton campus
+
+- intent: campus_guide_accommodation_bay
+  examples: |
+    - bay Accommodation
+    - accomndation building in bay campus
+    - where can I find the Accommodation in bay campus
+    - address of accommodation bay campus
+
+- intent: campus_guide_accommodation_Beckhouse
+  examples: |
+    - beckhouse Accommodation
+    - accomndation building in beckhouse
+    - where can I find the beckhouse Accommodation 
+    - address of beckhouse accommodation 
+    - beckhouse
+
+- intent: campus_guide_accommodation_Hendrefoilan
+  examples: |
+    - Hendrefoilan Accommodation
+    - accomndation building in Hendrefoilan
+    - where can I find the Hendrefoilan Accommodation 
+    - address of Hendrefoilan accommodation 
+    - Hendrefoilan
+
+- intent: campus_guide_accommodation_Offcampus
+  examples: |
+    - Off campus Accommodations
+    - accomndation building in Off campus
+    - where can I find the Off campus Accommodations 
+    - address of Off campus accommodation 
+    - Off campus
+    - accommodations not in university
+    - where to find other places to live?
+
+- intent: campus_guide_libraries
+  examples: |
+    - campus libraries
+    - libraries building of Swansea university
+    - What time does the Information desk in the Library open/shut? 
+    - library
+    - When is the Library open
+    - laibraries
+    - where can I find the libraries
+    - address of libraries
+    - I want to go to the library
+    - Where can I find information about the layout of the library and what to expect when I visit the library?
+
+- intent: campus_guide_libraries_singleton
+  examples: |
+    - singleton campus library
+    - Singleton park campus library
+    - library building of singleton campus
+    - where can I find the library of singleton campus
+    - address of library in singleton campus
+    - I want to go to the library in singleton 
+
+- intent: campus_guide_libraries_bay
+  examples: |
+    - bay campus library
+    - library building of bay campus
+    - where can I find the library of bay campus
+    - address of library in bay campus
+    - I want to go to the library in bay 
+    - Bay campus library
+
+- intent: campus_guide_libraries_St
+  examples: |
+    - St David's Park Library
+    - St David's Park library building 
+    - where can I find St David's Park library 
+    - address of St David's Park library in swansea
+    - I want to go to St David's Park library in bay 
+    - st david's park library
+
+- intent: campus_guide_libraries_SWM
+  examples: |
+    - South Wales Miners' Library
+    - South Wales Miners' library building 
+    - where can I find South Wales Miners' library 
+    - address of South Wales Miners' library 
+    - I want to go to South Wales Miners' library in swansea 
+    - south wales miners library
+
+- intent: campus_guide_libraries_Banwen
+  examples: |
+    - Banwen Library 
+    - Banwen library building   
+    - where can I find Banwen library 
+    - address of Banwen library 
+    - I want to go Banwen library 
+    - banwen library
+
+- intent: certificate
+  examples: |
+    - Can I request an additional copy of my certificate?
+    - how do I pay for a new certificate?
+    - Can I request official copies of my transcript or certificate?
+    - Can you provide notarised copies of transcripts or certificates?
+
+- intent: transcript
+  examples: |
+    - I need a transcript, what should I do?
+    - I want my transcript 
+    - where to collect my transcript 
+    - how do I pay for a new transcript?
+    - transcript collection?
+    - provide me with transcript 
+
+- intent: course_enroll
+  examples: |
+    - course enrollment
+    - course
+    - courses to enroll
+    - enroll
+
+- intent: course_enroll_my_Acc
+  examples: |
+    - my course enrollment
+    - my courses enrollment 
+    - my account enrollment
+    - I want to know my courses 
+
+- intent: enrolltimetable
+  examples: |
+    - my course enrollment
+    - my courses enrollment 
+    - my account enrollment
+    - I want to know my courses 
+
+- intent: course_enroll_my_Acc_marks
+  examples: |
+    - marks
+    - grades
+    - I would like to know my marks status
+    - Please tell me about my marks
+    - I want to know about my marks
+    - I want to know how many marks I have scored
+    - I want to know how many marks have I missed
+    - I would like to know how many marks have I scored
+    - I would like to know how many marks have I missed
+    - Please display my marks details
+    - Can I know about my marks please
+
+- intent: course_enroll_my_Acc_Attendence
+  examples: |
+    - Attendance
+    - I would like to know my attendance status
+    - Please tell me about my attendance
+    - I want to know about my classes
+    - I want to know how many classes I have attended
+    - I want to know how many classes have I missed
+    - I would like to know how many classes have I attended
+    - I would like to know how many classes have I missed
+    - Please display my attendance details
+    - Can I know about my attendance please
+
+- intent: course_enroll_my_Acc_timetable
+  examples: |
+    - Time table
+    - I would like to know my time table status
+    - Please tell me about my time table
+    - I want to know about my time table 
+    - Please display my time table details
+    - Can I know about my time table please
+    - timetable
+    - Where can I find my timetable?
+
+- intent: user_submitted_un
+  examples: |
+    - 2027726
+    - 1548720
+    - 2910467
+    - 1667392
+    - 2729592
+    - 1498253
+    - 1872213
+    - 2094472
+    - 2514431
+    - 1109221
+    - 2028722
+    - 2019843
+    - 1120974
+    - 2091865
+    - 2289104
+    - 1076352
+    - 2022937
+    - 2008713
+    - 1667893
+    - 2298000
+    - 1112409
+    - 1999456
+    - 2223987
+    - 2556221
+    - 2963108
+    - 1735267
+    - 1195534
+    - 2901745
+    - 1092647
+    - 2088901
+    - 2443178
+    - 2109346
+    - 1372683
+    - 2018735
+    - 2197154
+    - 1763521
+    - 2209871
+    - 1103524
+    - 1209231
+    - 2096621
+    - 1187253
+    - 2087112
+    - 2112340
+    - 1837544
+    - 2276153
+    - 1187345
+    - 2018763
+    - 2107357
+    - 2066351
+    - 1776245
+    - 2091867
+    - 2096653
+    - 1287563
+    - 2095463
+    - 2873452
+    - 1074563
+    - 2098756
+    - 1762453
+    - 2097534
+    - 1009753
+    - 2985432
+    - 2907645
+    - 1097254
+    - 2997634
+    - 2085184
+    - 2065341
+    - 1128742
+    - 2287645
+    - 2066531
+    - 2445009
+    - 2029967
+    - 1145207
+    - 2033452
+    - 2281064
+    - 2975413
+    - 1009555
+    - 2099312
+    - 2007653
+    - 1098546
+    - 2983251
+    - 1563309
+    - 2648894
+    - 1893564
+    - 1870023
+    - 1438862
+    - 1362409
+    - 1054378
+    - 2887443
+    - 2453780
+    - 2759467
+    - 2000323
+    - 2198452
+    - 2003315
+    - 2807635
+    - 2108563
+    - 2009754
+    - 2367863
+    - 2098732
+    - 2308911
+    - 2028812
+
+- intent: user_submitted_password
+  examples: |
+    - Ba2027726
+    - Rv1548720
+    - Sc2910467
+    - Bm1667392
+    - Am2729592
+    - Ks1498253
+    - Kj1872213
+    - Sr2094472
+    - Vc2514431
+    - Aa1109221
+    - Rd2028722
+    - Ks2019843
+    - Js1120974
+    - Ca2091865
+    - Ks2289104
+    - Rj1076352
+    - Nd2022937
+    - Rk2008713
+    - Su1667893
+    - Ma2298000
+    - Ap1112409
+    - Sa1999456
+    - Pe2223987
+    - Di2556221
+    - Ak2963108
+    - Ns1735267
+    - Ba1195534
+    - Ls2901745
+    - Mo1092647
+    - Ka2088901
+    - Hu2443178
+    - Ja2109346
+    - Se1372683
+    - Ca2018735
+    - Lu2197154
+    - Mi1763521
+    - Dh2209871
+    - Ma1103524
+    - Pj1209231
+    - Sa2096621
+    - Kc1187253
+    - Fs2087112
+    - Ri2112340
+    - Vi1837544
+    - Su2276153
+    - Ar1187345
+    - Ba2018763
+    - Vi2107357
+    - De2066351
+    - Mo1776245
+    - He2091867
+    - Sh2096653
+    - Er1287563
+    - Ar2095463
+    - Ch2873452
+    - Su1074563
+    - Su2098756
+    - Ga1762453
+    - Pe2097534
+    - Az1009753
+    - Mu2985432
+    - Ma2907645
+    - Sa1097254
+    - Ra2997634
+    - Ra2085184
+    - Mo2065341
+    - Ne1128742
+    - Ja2287645
+    - Ra2066531
+    - Mo2445009
+    - Ra2029967
+    - Ra1145207
+    - Su2033452
+    - Ri2281064
+    - Md2975413
+    - Ha1009555
+    - Ra2099312
+    - Ab2007653
+    - Sh1098546
+    - An2983251
+    - Mo1563309
+    - Su2648894
+    - Ar1893564
+    - Ra1870023
+    - Ke1438862
+    - Ra1362409
+    - Ku1054378
+    - Sa2887443
+    - La2453780
+    - Pu2759467
+    - Am2000323
+    - Ja2198452
+    - Ta2003315
+    - Ka2807635
+    - Bh2108563
+    - rd2009754
+    - Si2367863
+    - ra2098732
+    - dk2308911
+    - Sa2028812
+    
+- intent: course_enroll_general
+  examples: |
+    - all courses to enroll 
+    - all course
+    - Where do I go to get information about undergraduate and postgraduate courses?
+    - general course enroll 
+    - what are the courses to enroll
+    - course enrollment in general 
+    - all information of courses
+
+- intent: course_enroll_general_undergraduate
+  examples: |
+    - undergraduate course enrollment 
+    - what are the courses to enroll for undergraduate
+    - undergraduate course enrollment 
+    - information of undergraduate courses
+    - undergraduate courses
+    - undergrad courses
+
+- intent: course_enroll_general_postgraduate
+  examples: |
+    - postgraduate course enrollment 
+    - what are the courses to enroll for postgraduate
+    - postgraduate course enrollment 
+    - information of postgraduate courses
+    - postgraduate courses
+    - postgrad courses
+
+- intent: enroll_confirmation
+  examples: |
+    - Can you confirm whether a student is/has been enrolled at the University?
+    - student confirmation of enrollment 
+    - enrollment confirmation
+    - confirmation
+
+- intent: enroll_before_results
+  examples: |
+    - I am awaiting the result of an academic appeal. Can I enroll?
+    - can I enroll before getting my results?
+    - I am waiting for my results can I enroll?
+    - I still didn't get my results can I enroll?
+
+- intent: enroll_online
+  examples: |
+    - I have tried to enroll online but it says, “you are not eligible to enrol online”. What does this mean?
+    - I am having problems enrolling online. Can you help?
+    - online enrollment help 
+    - how to enroll online ?
+    - problems with online enrollment 
+    - Can students starting a year abroad enroll early?
+
+- intent: resubmit_work
+  examples: |
+    - Is it possible to re-submit a piece of coursework?
+    - What happens if I want to resubmit a work
+    - can i resubmit a coursework
+    - resubmit 
+    - re-submit
+    - redo a peice of work
+
+- intent: credits
+  examples: |
+    - How do module credits work? 
+    - How many credits do I need to graduate?
+    - credits
+    - total credits to graduate
+    - what are the modules credits
+
+- intent: inperson_enroll
+  examples: |
+    - Can I enroll in person on the Bay campus?
+    - I am a returning student. Can I enroll in person?
+    - inperson enrollment
+    - enroll inperson 
+
+- intent: Quarntine
+  examples: |
+    - Quarantine and Student Protect
+    - I am travelling from an Amber listed country, what do I need to do?
+    - I am travelling from a Red listed country, what do I need to do?
+    - Quarantine
+    - International Travel
+    - What if I have traveled to the UK from another country? 
+    - I am required to quarantine for a 10 day period. what to do?
+
+- intent: health_safety
+  examples: |
+    - COVID-19 Health & Safety Advice and Guidance for Undergraduate Students
+    - health and safety
+    - Self Isolation - what is the advice?
+    - What are the rules of Covid in university?
+    - I am feeling unwell, how do I access healthcare ? 
+    - Do I have to wear a mask on campus?
+    - Where can I get a Lanyard from if I'm exempt from wearing a mask?
+    - Is there someone I can talk to in confidence?
+
+- intent: Vaccine
+  examples: |
+    - What is the Covid-19 vaccine?
+    - Registering with a GP
+    - I want to take my vaccine 
+    - where can I get covid vaccination?
+    - vaccine
+
+- intent: student_engagement
+  examples: |
+    - What will the teaching format look like in 2020/21?
+    - What is the latest update regarding teaching hours?
+    - What will teaching spaces look like?
+    - Are University exams going to take place in January?
+    - teching is online or on campus?
+    - how will I engage this year?
+    - covid student engagement
+
+- intent: test
+  examples: |
+    - Why should I get tested if I have no symptoms? 
+    - Who should not get a test?
+    - Are tests compulsory?
+    - Do I need to self-isolate between tests?
+    - What are the differences between the tests?
+    - How accurate is the test?  
+    - Should I get tested if I have had the vaccination?
+    - where can I book a test 
+    - PCR test
+    - pcr test
+
+- intent: positive_results
+  examples: |
+    - What do I do if I test positive?
+    - Do people I live with have to self-isolate if I test positive? 
+    - I have positive test results
+    - positive test results
+    - what to do if I have covid-19 positive results
+    - what to do if I have positive test results of covid-19? 
+
+- intent: Financial_aid
+  examples: |
+    - Financial aid
+    - Financial help
+    - financial aid assist 
+    - Financial 
+
+- intent: Financial_aid_FinancialManagement
+  examples: |
+    - Financial management
+    - Financial management help 
+    - financial aid management 
+    - Financial Management department
+
+- intent: Financial_aid_FinancialDocuments
+  examples: |
+    - Financial Documents
+    - Financial Documents help 
+    - financial aid Documents 
+    - all documents related to Financial aid
+    - documents that might help me in financial payments
+    - financial payments documents
+    - information that helps me with my financial plan
+
+- intent: Financial_aid_Income
+  examples: |
+    - Financial Income
+    - Financial Income help 
+    - financial aid Income 
+    - Income related to Financial aid
+    - Income that might help me in financial payments
+    - financial Income
+    - income
+    - information that helps me with my financial income
+
+- intent: Financial_aid_Payments
+  examples: |
+    - Financial Payments
+    - Financial Payments help 
+    - financial aid Payments 
+    - Payments related to Financial aid
+    - my financial payments
+    - financial payments
+    - how to pay my financial bills
+    - payments 
+    - purchase orders
+    - order invoices 
+
+- intent: Financial_aid_Payroll
+  examples: |
+    - Financial Payroll
+    - Financial Payroll help 
+    - financial aid Payroll 
+    - Payroll related to Financial aid
+    - my financial Payroll
+    - financial payroll
+    - Payroll
+
+- intent: Financial_aid_tax
+  examples: |
+    - Financial tax
+    - Financial tax help 
+    - financial aid taxation 
+    - taxation letter
+    - my taxation as student
+    - financial taxation
+    - taxation
+    - how to get tax letter 
+
+- intent: Financial_aid_tuitionFees
+  examples: |
+    - Financial tuition Fees
+    - Paying Tuition Fees and Other Information
+    - Financial tuition Fees help 
+    - financial aid tuition Fees 
+    - my tuition Fees
+    - tuition Fees
+    - how can I know my tuition Fees
+    - How much will it cost to study and live in Swansea?
+
+- intent: Financial_aid_pay_fees
+  examples: |
+    - Financial tuition fees payment 
+    - Financial pay fees
+    - pay fees
+    - my tuition pay fees
+    - tuition pay fees
+    - How can I pay my fees?
+    - Can I pay my fees in instalments?
+    - How much will my fees be?
+    - how can I know my tuition pay fees
+    - When should I apply for student funding?
+
+- intent: Financial_aid_pay_fees_International
+  examples: |
+    - Financial tuition fees payment for international student 
+    - international financial pay fees
+    - international student fees
+    - I’m an International Student – is there any financial support available for me?
+    - international tuition fees
+    - what are the tuition fees for international student
+    - how can I know my tuition fees as international student
+
+- intent: Financial_aid_pay_fees_Undergraduate
+  examples: |
+    - Financial tuition fees payment for undergraduate student 
+    - Undergraduate financial pay fees
+    - Undergraduate student fees
+    - Undergraduate tuition fees
+    - undergrad tuition fees
+    - UK undergraduate Students
+    - what are the tuition fees for undergraduate student
+    - how can I know my tuition fees as undergraduate student
+
+- intent: Financial_aid_pay_fees_Postgraduate
+  examples: |
+    - Financial tuition fees payment for postgraduate student 
+    - Postgraduate financial pay fees
+    - Postgraduate student fees
+    - Postgraduate tuition fees
+    - postgrad tuition fees
+    - UK postgraduate Students
+    - what are the tuition fees for postgraduate student
+    - how can I know my tuition fees as postgraduate student
+
+- intent: Financial_aid_tuitionFees_OfficeDropin
+  examples: |
+    - Financial office Drop in
+    - Finance Office Drop-in Sessions
+    - office drop in
+    - office dropin help
+    - financial ffice Dropin
+    - where to find the financial office drop in
+
+- intent: Financial_aid_tuitionFees_StudentDebtPolicy
+  examples: |
+    - Financial Student Debt Policy
+    - Student Debt Policy
+    - what is the student Debt Policy
+    - student debt policy
+    - where can i get information on student debt policy
+    - dept policy 
+
+- intent: Financial_aid_tuitionFees_Refunds
+  examples: |
+    - refunds
+    - Refunds
+    - student Refunds
+    - how can I get refund
+    - return money
+    - return my fees
+    - How can I get a refund for my fees?
+    - If I withdraw or suspend my studies, will I get a refund?
+ 
+- intent: Scholarships
+  examples: |
+    - Scholarships
+    - what are the scholarships provided 
+    - student scholarships
+    - how can I get a scholarship
+    - who can I contact for scholarships
+    - I want a Scholarship
+    - Scholar ship
+    - Does Swansea University offer any scholarships or bursaries?
+    - I am expecting a Bursary this year however I have not received any funds. When can I expect payment?
+    - I have been awarded a bursary which reduces my fees; however, my record does not show a deduction. Who can I speak to about this?
+    - Am I eligible for any scholarships, studentships, or bursaries? 
+    - scholar ships
+
+- intent: Scholarships_International
+  examples: |
+    - International Scholarships
+    - what are the international scholarships provided 
+    - International students scholarships
+    - student scholarships for internationals
+    - how can I get an international scholarship
+    - who can I contact for international scholarships
+
+- intent: Scholarships_Undergraduate
+  examples: |
+    - Undergraduate Scholarships
+    - what are the Undergraduate scholarships provided 
+    - Undergraduate students scholarships
+    - student scholarships for Undergraduate
+    - how can I get an undergrad scholarship
+    - who can I contact for undergraduate scholarships
+
+- intent: Scholarships_Postgraduate
+  examples: |
+    - Postgraduate Scholarships
+    - Does Swansea University offer any scholarships or bursaries to postgraduate students?
+    - what are the Postgraduate scholarships provided 
+    - Postgraduate students scholarships
+    - student scholarships for Postgraduate
+    - how can I get an postgrad scholarship
+    - who can I contact for postgraduate scholarships
+  
+- intent: transport
+  examples: |
+    - Where can I get a bus pass
+    - What travel discounts are available for students
+    - Where can I get information about Bus timetables and season tickets
+    - public transport
+    - transport
+    - how can I travel to university
+    - plan my journey
+    - transportation tickets
+    - buses
+    - Where are the bus stops on campus?
+    - I’m confused about which bus to take and where to catch it
+
+- intent: termdates
+  examples: |
+    - termdates
+    - term dates
+    - term time table
+    - dates 
+   
+- intent: lostItem
+  examples: |
+    - lostItem
+    - lost Item
+    - Where is lost property held?
+    - lost property 
+    - lost and found  
+    - lost items 
+    - i lost my bag / phone / book 
+
+- intent: IDcard
+  examples: |
+    - where can i collect my student card?
+    - collect student card 
+    - student card
+    - id liabrary card
+    - id card 
+    - Where can I collect my student card
+    - ID card
+    - Where can I replace my student card?
+    - Student ID card
+    - I left my ID card in an exam. Where can I collect it from? 
+    
+- intent: prospectus
+  examples: |
+    - Can you post me a prospectus?
+    - prospectus
+    - how to apply for prospectus
+    - Prospectus
+    - post prospectus
+
+- intent: parking
+  examples: |
+    - Can I get a car parking permit? 
+    - visitor parking 
+    - where to park my car ? 
+    - parking
+
+- intent: uncorrectfees
+  examples: |
+    - The fees on my intranet account are wrong. How can I get this corrected?
+    - uncorrect fees?
+    - Why have I not received my funding from Student Finance?
+    - My fees are paid by a sponsor but are not appearing on my intranet record. How can I get this corrected?
+    - I think there is something wrong with the fees on my record. Who can I speak to about this?
+
+- intent: Financial_aid_funding
+  examples: |
+    - What funding is available ?
+    - funding ?
+    - When should I apply for student funding?
+    - What funding is available to UK students?
+    - What funding is available to EU students?
+    - student funding
+    - Is my course eligible for student funding?
+    - How does the Student Loans Company (SLC) calculate how much funding I will receive? 
+    - Does my student finance provider pay my tuition fees directly to the university?
+
+- intent: Financial_aid_UndergradFunding
+  examples: |
+    - What funding is available for undergraduate study?
+    - undergraduate funding ?
+    - undergraduate loans ?
+    - funding for undergraduate student
+    - Undergraduate Fundings
+    - When will I start repaying my undergraduate loan?
+
+- intent: Financial_aid_PostgradFunding
+  examples: |
+    - What funding is available for postgraduate study?
+    - postgraduate funding ?
+    - postgraduate loans ?
+    - When will I start repaying my postgraduate loan?
+    - funding for postgraduate student
+    - Postgraduate Fundings   

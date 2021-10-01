@@ -1,0 +1,1113 @@
+version: "2.0"
+
+intents:
+  - default
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - ask_bot
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - thanking
+  - compliment
+  - give_time
+  - career_advisor
+  - career_advisor_science
+  - career_advisor_management
+  - career_advisor_Art_Human
+  - career_advisor_physics
+  - career_advisor_chemistry
+  - career_advisor_biology
+  - career_advisor_geography
+  - career_advisor_accounting_finance
+  - career_advisor_BM
+  - career_advisor_economics
+  - career_advisor_marketing
+  - career_advisor_IT
+  - career_advisor_math
+  - career_advisor_english
+  - career_advisor_history
+  - career_advisor_medicine
+  - career_advisor_education
+  - career_advisor_society
+  - career_advisor_english_literature
+  - career_advisor_languages
+  - career_advisor_philosophy
+  - career_advisor_mediastudies
+  - career_advisor_humanandhealthscience
+  - career_advisor_law
+  - career_advisor_engineering
+  - help_desk
+  - help_desk_contactus
+  - holiday_year
+  - holiday_month
+  - help_desk_contactus_staff
+  - help_desk_contactus_admission
+  - help_desk_contactus_general
+  - IT_support
+  - IT_support_details
+  - IT_support_enquiry
+  - display_upcoming_holidays
+  - help_desk_contactus_admission_undergrad
+  - help_desk_contactus_admission_international
+  - help_desk_contactus_admission_postgrad
+  - help_desk_student_account
+  - help_desk_student_account_changePass
+  - help_desk_new_student_account
+  - help_desk_student_account_FA
+  - help_desk_covid19
+  - campus_guide
+  - campus_guide_main
+  - campus_guide_general_BayCampus
+  - campus_guide_general_SingletonParkCampus
+  - campus_guide_colleges_CS
+  - campus_guide_colleges_Medical
+  - campus_guide_colleges_law
+  - campus_guide_colleges_HHS
+  - campus_guide_colleges_E
+  - campus_guide_colleges_M
+  - campus_guide_colleges_AH
+  - colleges
+  - campus_guide_accommodation
+  - campus_guide_accommodation_singleton
+  - campus_guide_accommodation_bay
+  - campus_guide_accommodation_Beckhouse
+  - campus_guide_accommodation_Hendrefoilan
+  - campus_guide_accommodation_Offcampus
+  - campus_guide_libraries
+  - campus_guide_libraries_singleton
+  - campus_guide_libraries_bay
+  - campus_guide_libraries_St
+  - campus_guide_libraries_SWM
+  - campus_guide_libraries_Banwen
+  - certificate
+  - transcript
+  - user_submitted_password
+  - user_submitted_un
+  - course_enroll
+  - course_enroll_my_Acc
+  - course_enroll_my_Acc_Attendence
+  - course_enroll_my_Acc_marks
+  - course_enroll_my_Acc_timetable
+  - course_enroll_general_undergraduate
+  - course_enroll_general_postgraduate
+  - course_enroll_general
+  - enroll_confirmation
+  - enroll_before_results
+  - enroll_online
+  - resubmit_work
+  - credits
+  - inperson_enroll
+  - Quarntine
+  - Vaccine
+  - student_engagement
+  - health_safety
+  - test
+  - positive_results
+  - Financial_aid
+  - Financial_aid_FinancialManagement
+  - Financial_aid_FinancialDocuments
+  - Financial_aid_Income
+  - Financial_aid_Payments
+  - Financial_aid_Payroll
+  - Financial_aid_tax
+  - Financial_aid_tuitionFees
+  - Financial_aid_pay_fees
+  - Financial_aid_pay_fees_International
+  - Financial_aid_pay_fees_Undergraduate
+  - Financial_aid_pay_fees_Postgraduate
+  - Financial_aid_tuitionFees_OfficeDropin
+  - Financial_aid_tuitionFees_StudentDebtPolicy
+  - Financial_aid_tuitionFees_Refunds
+  - Financial_aid_funding
+  - Financial_aid_UndergradFunding
+  - Financial_aid_PostgradFunding
+  - Scholarships
+  - Scholarships_International
+  - Scholarships_Undergraduate
+  - Scholarships_Postgraduate
+  - transport
+  - termdates
+  - enrolltimetable
+  - lostItem
+  - IDcard
+  - prospectus
+  - parking
+  - uncorrectfees
+
+actions:
+  - action_default_fallback
+  - action_show_time
+  - action_display_upcoming_holidays
+  - action_holiday_year
+  - action_holiday_month
+  - action_help_desk_contactus
+  - action_help_desk
+  - action_career_advisor
+  - action_career_advisor_science
+  - action_career_advisor_management
+  - action_career_advisor_Art_Human
+  - action_IT_support
+  - action_help_desk_contactus_admission
+  - action_help_desk_contactus_staff
+  - action_help_desk_covid19
+  - action_help_desk_student_account
+  - action_help_desk_student_account_FA
+  - action_campus_guide
+  - action_campus_guide_main
+  - action_colleges
+  - action_campus_guide_accommodation
+  - action_campus_guide_libraries
+  - action_ask_password
+  - action_ask_un
+  - action_course_enroll
+  - action_course_enroll_my_Acc
+  - action_course_enroll_my_Acc_timetable
+  - action_validate_credentials_and_display_marks
+  - action_validate_credentials_and_display_attendance
+  - action_course_enroll_general
+  - action_Financial_aid
+  - action_Financial_aid_tuitionFees
+  - action_Financial_aid_pay_fees
+  - action_Financial_aid_funding
+  - action_Scholarships
+  - action_termdates
+  
+responses:
+  utter_default:
+  - text: "Sorry I didn't get that. Can you rephrase?"
+  
+  utter_greet:
+  - text: "Hello! \n\n How can I help you? \n\n Please write your enquiry or choose one of the below options:"
+    buttons:
+    - title: "Career Adviser"
+      payload: "Career Adviser"
+    - title: "Course Enrollment"
+      payload: "enroll"
+    - title: "Campus Guide "
+      payload: "Campus Guide"
+    - title: "Financial aid"
+      payload: "Financial aid"
+    - title: "Help Desk"
+      payload: "Help Desk"
+
+  utter_career_advisor:
+  - text: "Do you have a preference?"
+    buttons:
+    - title: "Science"
+      payload: "science"
+    - title: "Medical"
+      payload: "Medical"
+    - title: "Law and Criminology"
+      payload: "Law and Criminology"
+    - title: "Human and Health Sciences"
+      payload: "Human health "
+    - title: "Engineering"
+      payload: "Engineering"
+    - title: "Management"
+      payload: "Management"
+    - title: "Arts and Humanities"
+      payload: "art"
+      
+  utter_career_advisor_science:
+  - text: "Choose one of the options below."
+    buttons:
+    - title: "Physics"
+      payload: "Physics"
+    - title: "Biology"
+      payload: "Biology"
+    - title: "Chemistry"
+      payload: "Chemistry"
+    - title: "Computer Science"
+      payload: "Computer"
+    - title: "Mathematics"
+      payload: "Mathematics"
+    - title: "Geography"
+      payload: "Geography"
+
+  utter_career_advisor_management:
+  - text: "Choose one of the options below."
+    buttons:
+    - title: "Business and Management"
+      payload: "Business and Management"
+    - title: "Economics"
+      payload: "Economics"
+    - title: "Accounting and Finance"
+      payload: "Accounting and Finance"
+    - title: "Mraketing"
+      payload: "Marketing"
+
+  utter_career_advisor_Art_Human:
+  - text: "Choose one of the options below."
+    buttons:
+    - title: "Langauges"
+      payload: "Langauges"
+    - title: "History"
+      payload: "History"
+    - title: "English"
+      payload: "English"
+    - title: "Literature"
+      payload: "Literature"
+    - title: "Education"
+      payload: "Education"
+    - title: "Media Studies"
+      payload: "Media Studies"
+    - title: "Philosophy"
+      payload: "Philosophy" 
+    - title: "Society"
+      payload: "Society" 
+    
+  utter_career_advisor_physics:
+  - text: "The recommended path for you is Physics department follow the link for more information
+  https://www.swansea.ac.uk/physics/"
+
+  utter_career_advisor_chemistry:
+  - text: "The recommended path for you is Chemistry department follow the link for more information
+  https://www.swansea.ac.uk/chemistry/"
+
+  utter_career_advisor_biology:
+  - text: "The recommended path for you is Biology department follow the link for more information
+  https://www.swansea.ac.uk/biology/"
+
+  utter_career_advisor_geography:
+  - text: "The recommended path for you is Geography department follow the link for more information
+  https://www.swansea.ac.uk/geography/"
+  
+  utter_career_advisor_math:
+  - text: "The recommended path for you is Mathematics department follow the link for more information
+  https://www.swansea.ac.uk/Mathematics/"
+
+  utter_career_advisor_IT:
+  - text: "The recommended path for you is Computer Science department follow the link for more information
+  https://www.swansea.ac.uk/compsci/"
+
+  utter_career_advisor_BM:
+  - text: "The recommended path for you is Business Management department follow the link for more information
+  https://www.swansea.ac.uk/som/study-business-management/"
+
+  utter_career_advisor_accounting_finance:
+  - text: "The recommended path for you is Accounting and Finance department follow the link for more information
+  https://www.swansea.ac.uk/som/study-accounting-and-finance/"
+
+  utter_career_advisor_economics:
+  - text: "The recommended path for you is Economics department follow the link for more information
+  https://www.swansea.ac.uk/som/study-economics/"
+
+  utter_career_advisor_marketing:
+  - text: "The recommended path for you is Marketing department follow the link for more information
+  https://www.swansea.ac.uk/som/study-marketing/"
+
+  utter_career_advisor_medicine:
+  - text: "The recommended path for you is Medicine department follow the link for more information
+  https://www.swansea.ac.uk/medicine/"
+
+  utter_career_advisor_history:
+  - text: "The recommended path for you is History department follow the link for more information
+  https://www.swansea.ac.uk/history/"
+
+  utter_career_advisor_english:
+  - text: "The recommended path for you is English department follow the link for more information
+  https://www.swansea.ac.uk/english/"
+
+  utter_career_advisor_languages:
+  - text: "The recommended path for you is Langauges department follow the link for more information
+  https://www.swansea.ac.uk/languages/"
+
+  utter_career_advisor_english_literature:
+  - text: "The recommended path for you is English Literature department follow the link for more information
+  https://www.swansea.ac.uk/english-literature/"
+
+  utter_career_advisor_mediastudies:
+  - text: "The recommended path for you is Media Studies department follow the link for more information
+  https://www.swansea.ac.uk/mediastudies/"
+
+  utter_career_advisor_philosophy:
+  - text: "The recommended path for you is Philosophy department follow the link for more information
+  https://www.swansea.ac.uk/philosophy-and-ppe/"
+
+  utter_career_advisor_society:
+  - text: "The recommended path for you is Society department follow the link for more information
+  https://www.swansea.ac.uk/war-and-society/"
+
+  utter_career_advisor_education:
+  - text: "The recommended path for you is Education department follow the link for more information
+  https://www.swansea.ac.uk/education/"
+
+  utter_career_advisor_humanandhealthscience:
+  - text: "The recommended path for you is Human and Health Sciences department follow the link for more information
+  https://www.swansea.ac.uk/humanandhealthsciences/"
+
+  utter_career_advisor_law:
+  - text: "The recommended path for you is Law department follow the link for more information
+  https://www.swansea.ac.uk/law/"
+
+  utter_career_advisor_engineering:
+  - text: "The recommended path for you is Engineering department follow the link for more information
+  https://www.swansea.ac.uk/engineering/"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye, nice meeting you. \n\n Have a nice day!!"
+ 
+  utter_thanking:
+  - text: "You are most Welcome!"
+
+  utter_compliment:
+  - text: "Thank you!! you are so kind."
+
+  utter_iamabot:
+  - text: "I am Sarah university chatbot here to assist you !! "
+
+  utter_ask_bot:
+  - text: "I am fine thank you! \n\nWhat about you? "
+  utter_help_desk:
+  - text: "Please write your enquiry or choose one of the below options:"
+    buttons:
+    - title: "Holidays"
+      payload: "Holidays"
+    - title: "Term Dates"
+      payload: "term dates"
+    - title: "Student Account"
+      payload: "Student Account"
+    - title: "Covid-19"
+      payload: "Covid-19"
+    - title: "IT Support"
+      payload: "support"
+    - title: "Contact us"
+      payload: "Contact us"
+
+  utter_help_desk_student_account:
+  - text: "Choose one of the following options:"
+    buttons:
+    - title: "New Student"
+      payload: "New Student"
+    - title: "Changing Your Password"
+      payload: "Changing Your Password"
+    - title: "Further Assistance"
+      payload: "Further Assistance"
+
+  utter_help_desk_new_student_account:
+  - text: "If you are a New Student and want to set up your account follow the steps in this link:\n https://myuni.swansea.ac.uk/it-services/account-enquiry/"
+
+  utter_help_desk_student_account_FA:
+  - text: "If you require further assistance, please contact the Customer Service team throug the below button.
+  \n Please note that for calls relating to account security, you will need to phone us on 01792 295500 so that we can verify your identity."
+    buttons:
+    - title: "Support"
+      payload: "support"
+ 
+  utter_help_desk_student_account_changePass:
+  - text: "If you have forgotten your password or expect that your details have been compromised, please use this link: \n https://passwordreset.microsoftonline.com/
+  \n If you know your password but would like to change it, please use this link: \n https://account.activedirectory.windowsazure.com/ChangePassword.aspx"
+  
+  utter_help_desk_covid19:
+  - text: "Please write your enquiry or choose one of the below options and check this link: https://myuni.swansea.ac.uk/coronavirus-student-faqs/"
+    buttons:
+    - title: "Quarntine"
+      payload: "Quarntine" 
+    - title: "Vaccine"
+      payload: "Vaccine"
+    - title: "Student engagement" 
+      payload: "covid student engagement"
+    - title: "PCR test" 
+      payload: "PCR test"
+    - title: "Health and Safety" 
+      payload: "safety"
+    - title: "Instructions for positive results"
+      payload: "Instructions for positive results"
+
+  utter_Quarntine:
+  - text: "On 10 August 2021, the Welsh Government announced changes to the Student Protect policy, which aims to ensure that international students or those travelling\n
+  from Amber list countries can isolate safely\n within their accommodation (private or University owned) for the required period when arriving in Wales.
+  All students arriving from or via Amber list countries (returning and newly arriving travellers) must carefully read the information provided by the Welsh Government\n
+  and notify myunisupport@swansea.ac.uk ahead of travelling to the UK. \n
+  Check the rules of Wales Goverment through this link: https://gov.wales/rules-foreign-travel-and-wales-coronavirus-covid-19-html?dm_t=0%2C0%2C0%2C0%2C0
+  \nFor more infromation please visit this link: https://myuni.swansea.ac.uk/coronavirus-student-faqs/faq-international-students"
+
+  utter_Vaccine:
+  - text: "All information required on Vaccination can be found through this link: https://myuni.swansea.ac.uk/coronavirus-student-faqs/faq-vaccine/"
+  
+  utter_student_engagement:
+  - text: "For this year in teaching block one (September until January) you will be taught in a ‘blended’ way. \n
+  This means that some of your teaching will be done online and some will be on campus. The online teaching, \n
+  where you will be physically apart from your lecturer, can be ‘live’ with your lecturer present and where you’ll be able to interact. \n
+  Some of it may be self-directed which means that you can access the learning materials at a time to suit you.\n
+  For more information on student engagement please visit this link: https://myuni.swansea.ac.uk/coronavirus-student-faqs/faq-studies/"
+
+  utter_test:
+  - text: "COVID-19 TESTING ARRANGEMENTS FOR STUDENTS\n
+  Even if you have no symptoms, we recommend that you carry out twice weekly testing to help keep yourself, your family, friends and the community safe. 
+  \nAbout 1 in 3 people with COVID-19 do not have symptoms but can still infect others.\n
+  Home testing kits are still available to pick up from campus and will continue to be issued until the 31st of August.
+  \nTaliesin Create on Singleton Campus from 9.30 to 11.30am. The testing centres are open on Mondays, Wednesdays and Fridays and you don’t need an appointment.
+  \nThe Core from Bay Campus from 9.30am to 11.30am. The testing centres are open on Tuesdays and Thursdays and you don’t need an appointment
+  \nThe free home testing kits can also be collected from a number of locations locally. 
+  \nPlease see the current online list of opening hours and collection points through this link: https://maps.test-and-trace.nhs.uk/?dm_i=22V8,7FVEP,OOOQSD,U8FU2,1 \n
+  The kits can also be ordered online through this link: https://www.gov.uk/order-coronavirus-rapid-lateral-flow-tests?dm_i=22V8,7DQBL,OOOQ84,TYRNH,1
+  \nFor more information on PCR test please visit this link: https://myuni.swansea.ac.uk/coronavirus-student-faqs/faqs-asymptomatic-testing/"
+
+  utter_positive_results:
+  - text: "You must self-isolate at home in line with the UK Government self-isolation guidance: https://gov.wales/self-isolation-stay-home-guidance-households-possible-coronavirus \n
+          To reduce the risk of passing on the infection to other household members you should take actions as outlined in the guidance.\n
+          Please refer to the ‘Ending Isolation’ guidance and ‘Stay at Home Guidance Diagram’ for more information on when it is safe for you to come out of isolation:\n
+          https://gov.wales/self-isolation-stay-home-guidance-households-possible-coronavirus#section-38207 \n
+          https://gov.wales/self-isolation-explanatory-diagram \n
+          Your household members must self-isolate for 10 days from your symptom onset date;if they subsequently develop symptoms themselves, they must self-isolate for at least 10 days from their symptom onset and may request a test.\n
+          \nIf the ill person in the household is not showing any signs of improvement and has not already sought medical advice,visit the NHS Direct Wales website or call NHS 111. If it is a medical emergency, call 999.
+          \nRemember to update your details on the intranet and make myunisupport@swansea.ac.uk aware if you have tested positive for Covid-19 so we can support you with your engagement. "
+  
+  utter_health_safety:
+  - text: "Please take some time to review all relevant Covid-19 information and guidance laid out on our Health & Safety pages, including the Student Induction video.\n
+  Through this link: https://myuni.swansea.ac.uk/living-in-swansea/health-and-safety/undergraduates/covid-19/"
+
+  utter_help_desk_contactus:
+  - text: "Please choose one of the following:"
+    buttons:
+    - title: "Staff Information"
+      payload: "Staff"
+    - title: "Admission"
+      payload: "Admission"
+    - title: "General"
+      payload: "General info"
+
+  utter_help_desk_contactus_admission:
+  - text: " You can contact the admission team directly for help through these contact details: \n
+   Phone: 0800 094 9071 - email: admissions@swansea.ac.uk Or choose one of the following options:"
+    buttons:
+    - title: "Undergraduate"
+      payload: "Undergraduate admission"
+    - title: "Postgraduate"
+      payload: "Postgraduate admission"
+    - title: "International"
+      payload: "International admission"
+
+  utter_help_desk_contactus_admission_undergrad:
+  - text: "Contact Undergraduate admissions team on this tel: +44 (0)1792 295111 
+  \n Apply for an enquiry through this link: https://www.swansea.ac.uk/undergraduate/enquiry/
+  \n Download our undergraduate Prospectus: https://www.swansea.ac.uk/media/Swansea-Uni-UG-prospectus-2020-English.pdf "
+
+  utter_help_desk_contactus_admission_postgrad:
+  - text: "Contact Postgraduate admissions team on this tel: tel: +44 (0)1792 295358
+  \n Apply for an enquiry through this link: https://www.swansea.ac.uk/postgraduate/enquiry/
+  \n Download our postgraduate Prospectus: https://www.swansea.ac.uk/media/pg-2021-prospectus.pdf"
+
+  utter_help_desk_contactus_admission_international:
+  - text: "For international students contact information go to this link: https://www.swansea.ac.uk/international/contact-us/
+  \nEmail: international.admissions@swansea.ac.uk"
+
+  utter_help_desk_contactus_general:
+  - text: " For general enguries you can contact us through the below details: \n 
+  email: genenquiries@swansea.ac.uk \n
+  Tel: +44 (0)1792 205678\n
+  Minicom: +44 (0)1792 513100 "
+    
+  utter_display_upcoming_holidays: 
+  - text: "Please choose if you want for the whole year or only this month:"
+    buttons:
+    - title: "Month"
+      payload: "month"
+    - title: "Year"
+      payload: "Year"
+
+  utter_IT_support:
+  - text: "Go to this link for more help: https://www.swansea.ac.uk/it-services/help/Please \n
+  or choose one of the following:"
+    buttons:
+    - title: "Contact details"
+      payload: "IT details"
+    - title: "How to make enquiry"
+      payload: "make enquiry"
+
+  utter_IT_support_enquiry:
+  - text: "To submit an enquiry follow the following steps: \n  Go to MyUni through this link: https://myuni.swansea.ac.uk -> \n Login to your account -> \ngo to Apps -> \nISS Service desk -> \nMy Help -> \nSomething Broken -> \nwrite your enquiry -> \nSubmit !!"
+  
+  utter_IT_support_details:
+  - text: "You can contact us in the following ways: \n
+  via email: customerservice@swansea.ac.uk \n
+  via phone: +44 (0) 1792 295500 from 9am to 5pm Monday to Friday. \n
+  For more information go to this link https://www.swansea.ac.uk/it-services/."
+ 
+  utter_campus_guide_main:
+  - text: "You can have a virtual tour of the university through this link: https://www.swansea.ac.uk/virtual-tour-stand-alone/ Or choose the Campus site you would like to visit"
+    buttons:
+    - title: "Singleton Park Campus"
+      payload: "Singleton Park Campus" 
+    - title: "Bay Campus"
+      payload: "Bay Campus" 
+
+  utter_campus_guide_general_SingletonParkCampus:
+  - text: "You view Singleton Park Campus Map through this link: https://www.swansea.ac.uk/media/SingletonCampusMap.pdf \n
+  location:  https://goo.gl/maps/KHcw3myLHCCh2gmT9 \n
+  Have an online tour through this link: https://www.swansea.ac.uk/virtual-tour-stand-alone/?s=singleton \n
+  Address: Travelling west on the M4 leave the motorway at junction 42 and follow signs for Swansea on the A483 (Fabian Way). \n
+  On crossing the River Tawe the A483 becomes the A4067. \n
+  Continue west along this road, passing Sainsbury’s Superstore on the left-hand side of the road. 
+  \nAfter approximately 1.5 miles there is a footbridge over the road."
+    image: "https://i.ytimg.com/vi/Wb7n3B6OJBU/maxresdefault.jpg"
+
+  utter_campus_guide_general_BayCampus:
+  - text: "You view Bay Campus Map through this link: https://www.swansea.ac.uk/media/BayCampusMap.pdf \n
+  location:  https://goo.gl/maps/DBRyrScB78bnMuGn8 \n
+  Have an online tour through this link: https://www.swansea.ac.uk/virtual-tour-stand-alone/?s=bay \n
+  Address: Travelling west on the M4, leave the motorway at junction 42 and follow signs for Swansea on the A483 (Fabian Way).\n
+  The Bay Campus is situated to the left-hand side of Fabian Way and the main entrance is controlled by traffic lights. \n
+  Visitor parking is limited on Bay Campus, however there is a large Park and Ride facility located at Fabian Way,\n
+  which is a short distance from the Bay Campus."
+    image: "https://www.bof.co.uk/assets/images/blog/Swansea-University-Bay-Campus/thumbnail.png"
+  
+  utter_campus_guide:
+  - text: "Please choose the location you want to go to:"
+    buttons:
+    - title: "Campus Location"
+      payload: "main campus guide"
+    - title: "Colleges"
+      payload: "Colleges"
+    - title: "Accommodation"
+      payload: "Accommodation"
+    - title: "Libraries"
+      payload: "Libraries"
+
+  utter_colleges:
+  - text: "Which colloge are you looking for?"
+    buttons:
+    - title: "College of Science" 
+      payload: "College of science"
+    - title: "Medical School"  
+      payload: "College of Medical"
+    - title: "Hillary Rodham Clinton School of Law" 
+      payload: "Hillary Rodham Clinton School of Law"
+    - title: "College of Human and Health Sciences"
+      payload: "College of Human and Health Sciences"
+    - title: "College of Engineering"
+      payload: "College of Engineering"
+    - title: "College of Management"
+      payload: "College of Management" 
+    - title: "College of Arts and Humanities"  
+      payload: "College of Arts and Humanities"
+
+  utter_campus_guide_colleges_CS:
+  - text: "College of Science location:  https://goo.gl/maps/3uoKTKyz1g22K8YXA \n 
+  Have a tour: https://www.swansea.ac.uk/virtual-tour-stand-alone/?s=bay&g=43&c=tours_2005\n
+  Address: Department of Computer Science,\n
+  The Computational Foundry,\n
+  Swansea University Bay Campus,\n
+  Fabian Way,\n
+  Swansea, SA1 8EN\n"
+    image: "https://www.swansea.ac.uk/undergraduate/courses/science/computer-science/Compfoundry-ahr_1920x1080-610x310.jpg"
+
+  utter_campus_guide_colleges_Medical:
+  - text: "Medical School location: https://goo.gl/maps/94Xs3vQ9AAWRVD8G6 \n 
+    Have a tour: https://www.swansea.ac.uk/virtual-tour-stand-alone/?s=singleton&g=6&c=tours_54\n
+    Address: Swansea University Medical School,
+    Institute of Life Science 2,\n
+    Swansea University,\n
+    Singleton Park,\n
+    Swansea, SA2 8PP\n"
+    image: "https://www.swansea.ac.uk/medicine/facilities/grove/Grove-Header-image.jpg"
+
+  utter_campus_guide_colleges_law:
+  - text: "Hillary Rodham Clinton School of Law location: https://goo.gl/maps/sEFKczGYQYA2aX3U6 \n 
+  Have a tour: https://www.swansea.ac.uk/virtual-tour-stand-alone/?s=singleton&g=5&c=tours_1924001\n
+  Address: Richard Price Building,\n
+  Swansea University,\n
+  Singleton Park,\n
+  Swansea, SA2 8PP"
+    image: "http://www.dotenergyconsulting.com/images/swanseabanner.jpg"
+
+  utter_campus_guide_colleges_HHS:
+  - text: "College of Human and Health Sciences location:  https://goo.gl/maps/dMk3XV8QhdFMFaZYA \n 
+  Have a tour: https://www.swansea.ac.uk/virtual-tour-stand-alone/?s=singleton&g=4&c=tours_46\n
+  Address: College of Human and Health Sciences,\n
+  Singleton Park,\n
+  Swansea, SA2 8PP"
+    image: "https://www.swansea.ac.uk/media/HCS%20students-1787x1340.jpg"
+
+  utter_campus_guide_colleges_E:
+  - text: "College of Engineering location:   https://goo.gl/maps/MC352grV2i1DZfR1A \n 
+    Have a tour: https://www.swansea.ac.uk/virtual-tour-stand-alone/?s=bay&g=2&c=tours_16\n
+    Address: College of Engineering,\n
+    Swansea University Bay Campus,\n
+    Fabian Way,\n
+    Swansea, SA1 8EN"
+    image: "https://www.swansea.ac.uk/engineering/about-us/EngineeringCentral.jpg"
+
+  utter_campus_guide_colleges_M:
+  - text: "College of Management location: https://goo.gl/maps/wekJ2FSekpoe3hNz9\n 
+  Have a tour: https://www.swansea.ac.uk/virtual-tour-stand-alone/?s=bay&g=1&c=tours_4\n
+  Address: School of Management,\n
+  Swansea University,\n
+  Bay Campus,\n
+  Fabian Way,\n
+  Swansea, SA1 8EN"
+    image: "https://i2-prod.walesonline.co.uk/incoming/article4319395.ece/ALTERNATES/s1200/swansea-uni.jpg"
+
+  utter_campus_guide_colleges_AH:
+  - text: "College of Arts and Humanities location: https://goo.gl/maps/Vg8cUpNq8Da4iZXA8 \n 
+    Have a tour https://www.swansea.ac.uk/virtual-tour-stand-alone/?s=singleton&g=3&c=tours_57\n
+    Address:Keir Hardie Building,\n
+    Swansea University,\n
+    Singleton Park,\n
+    Swansea, SA2 8PP\n
+    Wales, UK. \n
+    Building (Building 4 on the Singleton Campus Map) "
+    image: "https://www.swansea.ac.uk/arts-and-humanities/abbey-HERO.jpg"
+
+  utter_campus_guide_accommodation:
+  - text: "select one of the accommodation locations below or have a tour through this link: https://www.swansea.ac.uk/virtual-tour-stand-alone/?s=accommodation 
+  \n for more information please visit this link: https://www.swansea.ac.uk/accommodation/"
+    buttons:
+    - title: "Singleton Park Campus"
+      payload: "Singleton Park Campus accommodation"
+    - title: "Bay Campus"  
+      payload: "Bay Campus accommodation"
+    - title: "Beck House  "
+      payload: "Beck House accommodation"
+    - title: "Hendrefoilan Student Village "
+      payload: "Hendrefoilan Student Village accommodation"
+    - title: "Off Campus"
+      payload: "Off Campus accommodation"
+
+  utter_campus_guide_accommodation_singleton:  
+  - text: "Address: Preseli Residence, Swansea University, Singleton Park, Swansea, SA2 8PP
+          \nTelephone No: +44 (0) 1792 602910
+          \nPlease always quote your Student Number.
+          \nEmail: Preseli-Reception@swansea.ac.uk
+          \nReception Office Hours: The Reception Office is staffed 24 hours a day.
+          \nHave a tour through this link: https://www.swansea.ac.uk/accommodation/accommodation-options/singleton-campus/"
+
+  utter_campus_guide_accommodation_bay:  
+  - text: "Address: Bay Campus Accommodation, Fabian Way, Skewen, Swansea SA1 8EN
+          \nTelephone No: 03001033000
+          \nE-mail:BayCampus@upp-ltd.com
+          \nReception is located in the Tower building.
+          \nPlease always quote your student number.
+          \nReception Opening hours:Monday- Friday 9-5.30pm 
+          \nHave a tour through this link: https://www.swansea.ac.uk/accommodation/accommodation-options/bay-campus/"
+
+  utter_campus_guide_accommodation_Beckhouse:   
+  - text: "Address: Beck House Reception, Beck House, 16 – 26 Sketty Road, Uplands, Swansea. SA2 0NF 
+          \nTelephone No: +44 (0) 1792 534043
+          \nE-mail: beck-reception@swansea.ac.uk
+          \nPlease always quote your Student Number.
+          \nReception Office Hours: Monday to Friday 09:30 to 10:30 & 14:30 to 15:30
+          \nHave a tour through this link: https://www.swansea.ac.uk/accommodation/accommodation-options/beck-house/"
+
+  utter_campus_guide_accommodation_Hendrefoilan:   
+  - text: "Address:  Hendrefoelan Student Village, Gower Rd, Sketty, Swansea SA2 7PG
+          \nTelephone No: +44 (0) 1792 295583
+          \nEmail:  hsv-reception@swansea.ac.uk
+          \nReception Office - Located in House 40
+          \nPlease always quote your Student Number.
+          \nReception Office Hours: Monday to Friday 06:00am to22:00
+          \nHave a tour through this link: https://www.swansea.ac.uk/accommodation/accommodation-options/hendrefoelan/"
+
+  utter_campus_guide_accommodation_Offcampus:
+  - text: "For Student Accommodation after the 1st year!
+          \nAddress: SAS Lettings, Horton Residence, Swansea University, Singleton Park, Swansea, SA2 8PH
+          \nTelephone No: +44 (0) 1792 295328
+          \nEmail: SAS@swansea.ac.uk
+          \nPlease always quote your Student Number.
+          \nFor Landlords: To enquire about our Property Management or Tenant Find services see: SAS Lettings for Landlords
+          \nReception Office Hours: Monday to Friday 09:00am - 4:00pm (Wednesday - 10:00am)
+          \nHave a tour through this link: https://www.swansea.ac.uk/accommodation/sas-lettings/"
+  
+  utter_campus_guide_libraries:
+  - text: "There are 5 different Specific Library locations please choose which one you'd like to visit.
+  \nFor more information please visit this link: https://www.swansea.ac.uk/library/library-hours/"
+    buttons:
+    - title: "Singleton Park Campus Library"
+      payload: "Singleton Park Campus Library" 
+    - title: "Bay Campus Library"  
+      payload: "Bay Campus Library"
+    - title: "St David's Park Library"
+      payload: "St David's Park Library"
+    - title: "South Wales Miners' Library"
+      payload: "South Wales Miners' Library"
+    - title: "Banwen Library"
+      payload: "Banwen Library"
+
+  utter_campus_guide_libraries_singleton:
+  - text: "Address: Singleton Park Library,Swansea University, Singleton Park, Swansea, SA2 8PP, https://goo.gl/maps/Tb41ZYqVED4ka4My8
+          \nTel: +44 (0)1792 295500
+          \nEmail the Customer Service Team: customerservice@swansea.ac.uk
+          \nFor more information please visit this link: https://www.swansea.ac.uk/library/library-hours/singleton-opening-location/"
+  
+  utter_campus_guide_libraries_bay:
+  - text: "Address: Bay Library, Swansea University, Bay Campus, Fabian Way, Crymlyn Burrows, Swansea, SA1 8EN, https://goo.gl/maps/J4QMojNFVraoo7QcA
+          \nTel: +44 (0)1792 295500
+          \nEmail the Customer Service Team: customerservice@swansea.ac.uk
+          \nFor more information please visit this link: https://www.swansea.ac.uk/library/library-hours/bay-opening-location/"
+
+  utter_campus_guide_libraries_St:
+  - text: "Address: St David's Park Library, Learning Resources Centre, College of Human and Health Sciences, Swansea University, Building 3, St David's Park, Jobswell Road, Carmarthen, SA31 3HB, https://goo.gl/maps/dk9Nib6rRyMjE2wg9
+          \nTel: +44 (0)1792 513838
+          \nEmail: i.phillips@swansea.ac.uk
+          \nFor more information please visit this link: https://www.swansea.ac.uk/library/library-hours/st-davids-park-library/"
+
+  utter_campus_guide_libraries_SWM:
+  - text: "Address: South Wales Miners' Library,Hendrefoelan Campus, Sketty SA2 7NB, https://goo.gl/maps/HBfAFYA7ynqMxJkd9
+          \nTel: +44 (0)1792 518603 
+          \nEmail: miners@swansea.ac.uk
+          \nFor more information please visit this link: https://www.swansea.ac.uk/library/south-wales-miners-library/"
+
+  utter_campus_guide_libraries_Banwen:
+  - text: "Address: Banwen Library is a branch of the South Wales Miners’ Library and is based at the DOVE Workshop, Banwen, 25 miles from Swansea in the Dulais Valley, https://goo.gl/maps/frxsLpLKCwWVvZvKA
+          \nTel: +44 (0)1792 518603 
+          \nEmail: miners@swansea.ac.uk
+          \nFor more information please visit this link:  https://www.swansea.ac.uk/library/library-hours/banwen-library/"
+  
+  utter_certificate:
+  - text: "Due to issues of security, duplicate certificates are not provided however certified copies of certificate can be issued.
+          \n In order to obtain a certified copy, students shall be required to provide a photocopy of the original document to myunihub@swansea.ac.uk which will then be certified as a true copy by the University. 
+          \nAn administrative charge of £10 shall be charged for this service (up to 5 certified copies). 
+          \nThis fee will also cover the postal charges of first class mail or air mail.
+          \n You can also pay for your certificate in person at MyUniHub reception on Singleton or Bay campus, or pay by card over the phone by calling 01792 606000 between the hours of 9am-4pm."
+  
+  utter_transcript:
+  - text: "You can download your transcript as a PDF file from your Intranet profile. 
+          \nSelect Course Details from the menu the left and scroll across to the right hand margin.
+          \nThere will be a hyperlink there through which you can download the document.
+          \n You can pay for your transcript in person at MyUniHub reception on Singleton or Bay campus, or pay by card over the phone by calling 01792 606000 between the hours of 9am-4pm."
+
+  utter_ask_un:
+  - text: Please enter your University number
+  
+  utter_ask_password:
+  - text: Please enter your password
+
+  utter_course_enroll:
+  - text: "Information on enrolment for new and continuing students can be found here: http://www.swansea.ac.uk/enrolment/ \n
+  Please choose one of the below options or write your enquiry:"
+    buttons:
+    - title: "My Account"
+      payload: "my enrollment" 
+    - title: "General Courses Enroll"  
+      payload: "all courses"
+    - title: "Enrollment Timetable"  
+      payload: "Enrollment Timetable" 
+
+  utter_course_enroll_my_Acc:
+  - text: "Please choose one of the below options or write your enquiry:"
+    buttons:
+    - title: "Marks"
+      payload: "Marks" 
+    - title: "Attendance"  
+      payload: "Attendance"
+    - title: "Timetable"  
+      payload: "my timetable"
+
+  utter_course_enroll_my_Acc_Attendence:
+  - text: "Login to your account to check your attendance:"
+
+  utter_course_enroll_my_Acc_marks:
+  - text: "Login to your account to check your grades:"
+
+  utter_course_enroll_my_Acc_timetable:
+  - text: "Login to your account to check your timetable:"
+
+  utter_course_enroll_general:
+  - text: "Please choose if you want undergraduate or postgraduate courses:"
+    buttons:
+    - title: "Undergraduate"
+      payload: "undergraduate courses" 
+    - title: "Postgraduate"  
+      payload: "postgraduate courses"
+
+  utter_course_enroll_general_undergraduate:
+  - text: "Please follow the link for undergraduate course enrollment https://www.swansea.ac.uk/undergraduate/courses/"
+
+  utter_course_enroll_general_postgraduate:
+  - text: "Please follow the link for postgraduate course enrollment https://www.swansea.ac.uk/postgraduate/taught/"
+ 
+  utter_enroll_confirmation: 
+  - text: "We can only release information about our students to third parties with their explicit consent. \n
+        Please email myunihub@swansea.ac.uk with your request and we will do our best to help."
+
+  utter_enroll_before_results:
+  - text: "A candidate who submits an appeal at the end of a level, \n
+  year or part of study shall not be permitted to progress to the next level, \n
+  year or part until such time as a decision has been reached.  However, at the discretion of the College, \n
+  a candidate may be permitted to informally attend teaching at the next level or part while an appeal is pending. 
+  \n Further information is available here: 
+  https://www.swansea.ac.uk/academic-services/academic-guide/assessment-and-progress/academic-appeals/10-status-of-a-candidate-during-an-appeal/"      
+
+  utter_enroll_online:
+  - text: "In order to enrol you will need to complete the right to study registration. \n
+  For more information on right to study registration please go to https://myuni.swansea.ac.uk/enrolment  \n
+  From here, you will need to select whether you are a new or continuing student \n
+  and then select the tab for information on either International Right to Study Registration, or UK and EU Right to Study Registration.
+  \nIf for any reason you cannot enrol online, please email myunihub@swansea.ac.uk or chat live to a member of staff here myuni.swan.ac.uk
+  \nUndergraduate students on a year out can enrol from mid-August. Information on enrolment is available here: http://www.swansea.ac.uk/enrolment/enrol-online/"
+
+  utter_resubmit_work:
+  - text: "If the mark you receive for a piece of coursework causes you to fail the module then you may be required to re-submit coursework \n
+  as supplementary assessment. Further information on assessment and progression at undergraduate level is available \n
+  here: https://www.swansea.ac.uk/academic-services/academic-guide/undergraduate-award-regulations/undergraduate-assessment-regulations/2-rules-for-progression-and-awarding-credit/
+  \nFurther information on assessment and progression at postgraduate level is available \n
+  here: https://www.swansea.ac.uk/academic-services/academic-guide/postgraduate-taught-awards-regulations/postgraduate-taught-awards-assessment-regulations/2-standard-masters-assessment-regs/"
+
+  utter_credits:
+  - text: "Modules are allocated a fixed credit weighting which gives an indication of the workload associated with each module.\n
+   Further information on module credits is available here: https://www.swansea.ac.uk/academic-services/academic-guide/your-programme-structure-explained/credit-points/"
+
+  utter_inperson_enroll:
+  - text: "Enrolment in person will be taking place in the Great Hall on Bay Campus. \n 
+   For more information on enrolling in person can be found here: http://www.swansea.ac.uk/enrolment/register-in-person/"
+
+  utter_Financial_aid:
+  - text: "Please choose one of the below options or write your enquiry and for more information you can visit this link: https://www.swansea.ac.uk/money-campuslife/"
+    buttons:
+    - title: "Financial Management"
+      payload: "Financial Management" 
+    - title: "Financial Documents"  
+      payload: "Financial Documents"
+    - title: "Payments"
+      payload: "Payments" 
+    - title: "Income"  
+      payload: "Income"
+    - title: "Payroll"  
+      payload: "Payroll" 
+    - title: "Taxation"
+      payload: "Taxation" 
+    - title: "Funding"
+      payload: "Funding"   
+    - title: "Scholarships"
+      payload: "Scholarships" 
+    - title: "Paying Tuition Fees and Other Information"  
+      payload: "Paying Tuition Fees and Other Information"
+      
+  utter_Financial_aid_FinancialManagement:
+  - text: "The Financial Management team aims to provide high quality financial information and insight for decision making.
+  \nThis includes financial planning and budgeting support, preparation of the 10 Year Financial forecasts for the University and the individual Colleges and Professional Service Units, reporting of performance including the provision of financial reports, interpretation and advice and investment appraisal.
+  \nThe Team also has responsibilities for processing internal recharges, setting up new subprojects on ABW and approval of employment requests.
+  \nThe section operates a Business Partnering concept for the Academic Colleges and Professional Service Units.
+  \nContact Information Email: managementaccounting@swansea.ac.uk"
+  
+  utter_Financial_aid_FinancialDocuments:
+  - text: "These are all the Financial Documents:
+  \nCriminal Finances Act 2017 Compliance Policy: https://www.swansea.ac.uk/media/Criminal-Finances-Act-2017-Compliance-Policy.pdf
+  \nAnti Money Laundering Policy: https://www.swansea.ac.uk/media/anti-money-laundering-policy.pdf
+  \nPrevention of Bribery - Policy Statement:https://www.swansea.ac.uk/media/F---D.9-Prevention-of-Bribery---Policy-Statement.pdf
+  \nInvesting your Student Fees: https://www.swansea.ac.uk/media/Investing-your-student-fees-2018-19.pdf
+  \nFinancial Review 2020: https://www.swansea.ac.uk/media/Financial-Review-2020.pdf
+  \nAdolygiad Ariannol 2020: https://www.swansea.ac.uk/media/Adolygiad-Ariannol-2020.pdf
+  \nOperating and Financial Review 2018-19: https://www.swansea.ac.uk/media/Operating-and-Financial-Review-2018-19.pdf
+  \nOperating and Financial Review and Financial Statements Bilingual 2017-2018: https://www.swansea.ac.uk/media/Operating-and-Financial-Review-and-Financial-Statements-17.18-Bilingual.pdf
+  \nOperating and Financial Review 2016 - 2017: https://www.swansea.ac.uk/media/Operating-and-Financial-Review-2016---2017.pdf
+  \nOperating and Financial Review and Financial Statements Bilingual 2015-16: https://www.swansea.ac.uk/media/Operating-and-Financial-Review-and-Financial-Statements-2015-16.pdf
+  \nOperating and Financial Review and Financial Statements 2014-15: https://www.swansea.ac.uk/media/Operating-and-Financial-Review-and-Financial-Statements-2014-15.pdf
+  \nOperating and Financial Review and Financial Statements 2013-2014: https://www.swansea.ac.uk/media/OFR-2014-Eng-[For-Approval].pdf"
+
+  utter_Financial_aid_Income:
+  - text: "The Income Section is tasked with the efficient and effective management of the University’s credit control function. This includes management of the collection of both undergraduate and postgraduate tuition fees, and also commercial income.
+  \nKindly find more information on the following link: https://www.swansea.ac.uk/finance-swansea-university/income-cash/"
+
+  utter_Financial_aid_Payments:
+  - text: "The Payments Section is responsible for paying the invoices from our suppliers and dealing with any associated administration.
+     \nAll invoices should be submitted as a PDF file to invoices@swansea.ac.uk
+     \nIf you have any queries, please review the FAQs in the link below and if you cannot find an answer, please email supplierenquiries@swansea.ac.uk and a member of the team will get back to you.
+     \nhttps://www.swansea.ac.uk/finance-swansea-university/payments/"
+
+  utter_Financial_aid_Payroll:
+  - text: "The Payroll Section administrates the monthly, casual and pensioner payrolls. 
+  \nThe Payroll Office is open between 9:00 am to 5:00pm; we are located on the first floor of the Finance Building. 
+  \nPay Day falls on the last working day of each month, taking into account bank holidays and weekends. 
+  \nPayment will be made by BACS provided you have submitted a completed Bank Details Form and photographic ID to either HR or Finance Reception.
+  \nContact information Email: payroll@swansea.ac.uk"
+
+  utter_Financial_aid_tax:
+  - text: "The taxation team is responsible for the provision of a high quality, comprehensive and professional taxation service on behalf of the University.
+    \nThe taxation team is responsible for the management of taxation matters, providing advice across the University, reviewing, updating and implementing internal taxation policies, procedures and controls along with external reviews and updates following tribunals and changes to legislation. The team aims to minimise risk for the University by ensuring University wide compliance with external legislation and internal policies, procedures and controls across the university.
+    \nContact information Email: tax@swansea.ac.uk"
+  
+  utter_Financial_aid_tuitionFees:
+  - text: "Please choose one of the below options or write your enquiry:"
+    buttons:
+    - title: "How To Pay Your Fees"
+      payload: "How To Pay Your Fees" 
+    - title: "Finance Office Drop-in Sessions"  
+      payload: "Finance Office Drop-in Sessions"
+    - title: "Student Debt Policy"
+      payload: "Student Debt Policy" 
+    - title: "Refunds"  
+      payload: "Refunds"
+
+  utter_Financial_aid_funding:
+  - text: "Please choose one of the below options or write your enquiry:"
+    buttons:
+    - title: "Undergraduate Funds"
+      payload: "Undergraduate Funds" 
+    - title: "Postgraduate Funds"  
+      payload: "Postgraduate Funds"
+
+  utter_Financial_aid_UndergradFunding:
+  - text: "Visit this link for Undergraduate Funds: https://www.swansea.ac.uk/undergraduate/fees-and-funding/student-loans-and-grants/"
+
+  utter_Financial_aid_PostgradFunding:
+  - text: "Visit this link for Postgraduate Funds: https://www.swansea.ac.uk/postgraduate/fees-and-funding/pg-loans/"
+
+  utter_Financial_aid_pay_fees:
+  - text: "Please choose one of the below options or write your enquiry:"
+    buttons:
+    - title: "International Students" 
+      payload: "International Students" 
+    - title: "UK Undergraduate Students" 
+      payload: "UK Undergraduate Students"
+    - title: "UK Postgraduate Students" 
+      payload: "UK Postgraduate Students" 
+
+  utter_Financial_aid_pay_fees_International:
+  - text: "Payment dates September 2021 entry:
+          \n1st Instalment (At least 50%) before or at enrolment
+          \n2nd Instalment (25%) due by 1st February 2022
+          \nFinal Instalment (25%) due by 6th May 2022
+
+          \n\nPayment dates January 2022 entry:
+          \n1st Instalment (At least 50%) before or at enrolment
+          \n2nd Instalment (25%) due by 6th May 2022
+          \nFinal Instalment (25%) due by 26th August 2022
+      \nFor futher information visit this link: https://www.swansea.ac.uk/finance-swansea-university/paying-tuition-fees-and-other-information/pay-fees-international-students/
+      \nIf you have any tuition fee queries and would like to speak to a member of our team, we hold drop-in sessions at the following times and locations by clicking on the below button:"
+    buttons:
+    - title: "Finance Office Drop-in Sessions"  
+      payload: "Finance Office Drop-in Sessions" 
+  
+  utter_Financial_aid_pay_fees_Undergraduate:
+  - text: "Payment dates September 2021 entry:
+          \n1st Instalment (33%) 5th November 2021  
+          \n2nd Instalment (33%) 1st February 2022 
+          \nFinal Instalment (34%) 6th May 2022  
+          
+          \n\nPayment dates January 2022 entry:
+          \n1st Instalment (33%) 17th February 2022  
+          \n2nd Instalment (33%) 6th May 2022 
+          \nFinal Instalment (34%) 26th August 2022  
+          \n\nStudents who do not have a tuition fee loan, or have been told that they are not eligible to receive one, or are who not sponsored. You are required to make arrangements to pay the tuition fee directly to the University.
+  \nFor futher information visit this link: https://www.swansea.ac.uk/finance-swansea-university/paying-tuition-fees-and-other-information/how-to-pay-your-fees-uk-undergraduate/
+  \nIf you have any tuition fee queries and would like to speak to a member of our team, we hold drop-in sessions at the following times and locations by clicking on the below button:"
+    buttons:
+    - title: "Finance Office Drop-in Sessions"  
+      payload: "Finance Office Drop-in Sessions" 
+    
+  utter_Financial_aid_pay_fees_Postgraduate:
+  - text: "PG Taught September 2021 entry:
+          \n1st Instalment (33%) 5th November 2021
+          \n2nd Instalment (33%) 1st February 2022
+          \nFinal Instalment (34%) 6th May 2022 
+          
+          \n\nPG Taught January 2022 entry:
+          \n1st Instalment (33%) 17th February 2022
+          \n2nd Instalment (33%) 6th May 2022 
+          \nFinal Instalment (34%) 26th August 2022
+          
+          \n\nPOSTGRADUATE RESEARCH:
+          \nPayment arrangements for Research Postgraduate students differ slightly from Taught Postgraduates. The main reason is that Taught Postgraduate Programmes broadly follow the structure of the Undergraduate academic year, whereas Research students enrol on a rolling 12 month cycle.
+          \nFor futher information visit this link: https://www.swansea.ac.uk/finance-swansea-university/paying-tuition-fees-and-other-information/pay-fees-uk-postgraduate/
+          \nIf you have any tuition fee queries and would like to speak to a member of our team, we hold drop-in sessions at the following times and locations by clicking on the below button:"
+    buttons:
+    - title: "Finance Office Drop-in Sessions"  
+      payload: "Finance Office Drop-in Sessions" 
+
+  utter_Financial_aid_tuitionFees_OfficeDropin:
+  - text: "The Finance Office Support team is holding regular drop-in sessions on the Park Campus and the Bay Campus, where a designated member of staff will be available to answer tuition fee related queries.
+  \nCome and talk to our team in a friendly, helpful and confidential environment.
+  \n\nPARK CAMPUS:
+  \nFinance Department, Ground floor.
+  \nPlease see the drop in times below:
+  \nMonday:        1.00pm - 4.00pm
+  \nWednesday:    10.00am – 1.00pm
+  \nFriday:        1.00pm - 4.00pm
+  \nEmail: income.tuition@swansea.ac.uk
+  \n\nBAY CAMPUS:
+  \nBay Campus, Tower Information Centre.
+  \nPlease see the drop in times below:
+  \nThursday:  10.00am – 1.00pm
+  \nEmail: income.tuition@swansea.ac.uk"
+
+  utter_Financial_aid_tuitionFees_StudentDebtPolicy:
+  - text: "Plesae visit this link for Student Debt Policy information: https://www.swansea.ac.uk/finance-swansea-university/paying-tuition-fees-and-other-information/student-debt-policy/"
+
+  utter_Financial_aid_tuitionFees_Refunds:
+  - text: "Requesting a refund:
+      \nIf you have made an overpayment or your tuition fees have been reduced due to a late sponsor notification or you have suspended or withdrawn from your program you may request a refund from refunds@swansea.ac.uk
+      For futher information please visit this link: https://www.swansea.ac.uk/undergraduate/fees-and-funding/tuition-fees/refunds-policy/ or you can contact the Admissions team"
+    buttons:    
+    - title: "Admission"
+      payload: "Admission"
+
+  utter_Scholarships:
+  - text: "Please choose one of the below options or write your enquiry and for more information you can visit this link: http://www.swansea.ac.uk/scholarships \n or contact myunihub@swansea.ac.uk, or call 01792 606000."
+    buttons:
+    - title: "International Scholarships"
+      payload: "International Scholarships" 
+    - title: "Undergraduate Scholarships"  
+      payload: "Undergraduate Scholarships" 
+    - title: "Postgraduate Scholarships"
+      payload: "Postgraduate Scholarships" 
+
+  utter_Scholarships_International:
+  - text: "We are proud to continue our commitment to providing prestigious scholarship opportunities to students from across the world. With a range of international scholarships available, please consult the information below for eligibility criteria.
+  \nAn international scholarship at Swansea University provides more than a source of funding. You will have access to a number of exclusive scholarship-holder events including specialist senior networking opportunities whilst celebrating your success.
+  \nClick on the link below for more infromation: https://www.swansea.ac.uk/international-students/my-finances/international-scholarships/ or contact the admission team for further assistant"
+    buttons:
+    - title: "Admission"
+      payload: "International Admission" 
+      
+  utter_Scholarships_Undergraduate:
+  - text: "Swansea University offers a range of academic, departmental, excellence and income related scholarships and bursaries. Click on the link below to find out more.
+  \nhttps://www.swansea.ac.uk/undergraduate/scholarships/ or contact the admission team for further assistant"
+    buttons:
+    - title: "Admission"
+      payload: "Undergraduate Admission" 
+
+  utter_Scholarships_Postgraduate:
+  - text: "We understand that the cost of your studies is one of the most important factors when deciding on a postgraduate degree. That's why we offered over £8 million in postgraduate scholarships last year. Explore your options today by clicking on the below link:
+  \nhttps://www.swansea.ac.uk/postgraduate/scholarships/"
+    buttons:
+    - title: "Admission"
+      payload: "Postgraduate Admission" 
+
+  utter_transport:
+  - text: "All the information you need about travelling to and from Swansea University by public transport is in the below link:
+  \nhttps://www.swansea.ac.uk/sustainability/travel/public-transport
+  \n\nIf you haven’t found the answers you’re looking for under this link, get in touch with our Sustainable Travel Officer by the following email: j.cornelius@swansea.ac.uk
+  \nShe will be happy to help you with your query."
+
+  utter_enrolltimetable:
+  - text: "https://myuni.swansea.ac.uk/enrolment/enrolment-timetable"
+
+  utter_lostItem:
+  - text: "Lost property is held at Singleton campus-security lodge adjacent to Fulton House or Bay campus-security at the St Modwens reception desk in the Tower Information Centre." 
+
+  utter_IDcard:
+  - text: "Students can collect their ID/Library card from Bay Library or Singleton Park Library depending where your course is based.
+  \nIn addition, if Student left thier ID Cards in exam venues it is returned immediately to the nearest MyUniHub. 
+  The ID Card is immediately passed to the library on either campus who will contact you to arrange collection.
+  \n You can also replace your ID card at the library on either campus. There is a charge of £4.00 for a replacement card. 
+  \n For more information on Student ID kindly visit this link: https://www.swansea.ac.uk/library/id-card-collection \nor direcly contact Email: library@swansea.ac.uk Tel: 01792 295500" 
+
+  utter_prospectus:
+  - text: "You can request a physical copy of either the undergrad or postgrad prospectus using this online form: http://www2.swan.ac.uk/forms/SUprospectus.htm"
+
+  utter_parking:
+  - text: "Students are not permitted to park on either campus unless students require reasonable adjustments for medical issues, live out of area, have dependent children in our crèche or are a blue badge holder, you may be eligible for a parking permit.\nAlternatively, you can contact the Estates Department on: estates-customerservices@swansea.ac.uk
+  \n For Visitors to Swansea University have a range of parking options around and close to the University, including Pay and Display you can find the information on the following link:https://www.swansea.ac.uk/the-university/location/visitor-parking/"
+
+  utter_uncorrectfees:
+  - text: "Please contact myunihub@swansea.ac.uk, or call 01792 606000 and we will help you to resolve the matter."
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+

@@ -1,0 +1,1075 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: ask bot path
+  steps:
+  - intent: ask_bot
+  - action: utter_ask_bot
+  - intent: mood_great
+  - action: utter_happy
+
+- story: compliment 
+  steps:  
+  - intent: compliment
+  - action: utter_compliment
+
+- story: thanking 
+  steps:  
+  - intent: thanking
+  - action: utter_thanking
+
+- story: path about time
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: give_time
+  - action: action_show_time
+
+- story: Career Adviser 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor
+  - action: action_career_advisor
+
+- story: Career Adviser science
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_science
+  - action: action_career_advisor_science
+
+- story: Career Adviser management
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_management
+  - action: action_career_advisor_management
+
+- story: Career Adviser art human
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_Art_Human
+  - action: action_career_advisor_Art_Human
+
+- story: Career Adviser physics 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_physics
+  - action: utter_career_advisor_physics
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser Chemistry
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_chemistry
+  - action: utter_career_advisor_chemistry
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser Biology
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_biology
+  - action: utter_career_advisor_biology
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser Geography
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_geography
+  - action: utter_career_advisor_geography
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser BM
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_BM
+  - action: utter_career_advisor_BM
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser accounting and fainance
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_accounting_finance
+  - action: utter_career_advisor_accounting_finance
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser IT
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_IT
+  - action: utter_career_advisor_IT
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser math
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_math
+  - action: utter_career_advisor_math
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser economics
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_economics
+  - action: utter_career_advisor_economics
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser marketing
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_marketing
+  - action: utter_career_advisor_marketing
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser medicine
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_medicine
+  - action: utter_career_advisor_medicine
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser english
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_english
+  - action: utter_career_advisor_english
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser history
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_history
+  - action: utter_career_advisor_history
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser English Literature
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_english_literature
+  - action: utter_career_advisor_english_literature
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser languages
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_languages
+  - action: utter_career_advisor_languages
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser Education
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_education
+  - action: utter_career_advisor_education
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser mediastudies
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_mediastudies
+  - action: utter_career_advisor_mediastudies
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser Philosophy
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_philosophy
+  - action: utter_career_advisor_philosophy
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser Society
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_society
+  - action: utter_career_advisor_society
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser humanandhealthscience
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_humanandhealthscience
+  - action: utter_career_advisor_humanandhealthscience
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser law
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_law
+  - action: utter_career_advisor_law
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: Career Adviser engineering
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: career_advisor_engineering
+  - action: utter_career_advisor_engineering
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: help desk
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_desk
+  - action: action_help_desk
+
+- story: contact us
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_desk_contactus
+  - action: action_help_desk_contactus
+
+- story: upcoming holidays
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: display_upcoming_holidays
+  - action: action_display_upcoming_holidays
+  
+- story: upcoming holidays month
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: holiday_month
+  - action: action_holiday_month
+
+- story: upcoming holidays year
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: holiday_year
+  - action: action_holiday_year
+
+- story: contactus staff
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_desk_contactus_staff
+  - action: action_help_desk_contactus_staff
+  
+- story: contactus general
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_desk_contactus_general
+  - action: utter_help_desk_contactus_general
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: contactus IT support
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: IT_support
+  - action: action_IT_support
+
+- story: contactus IT support details
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: IT_support_details
+  - action: utter_IT_support_details
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+
+- story: contactus IT support enquiry
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: IT_support_enquiry
+  - action: utter_IT_support_enquiry
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+
+- story: contactus admission
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_desk_contactus_admission
+  - action: action_help_desk_contactus_admission
+
+- story: contactus admission undergrad
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_desk_contactus_admission_undergrad
+  - action: utter_help_desk_contactus_admission_undergrad
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: contactus admission postgrad
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_desk_contactus_admission_postgrad
+  - action: utter_help_desk_contactus_admission_postgrad
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: contactus admission international
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_desk_contactus_admission_international
+  - action: utter_help_desk_contactus_admission_international
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: help desk covid19
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_desk_covid19
+  - action: action_help_desk_covid19
+
+- story: help desk student account 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_desk_student_account
+  - action: action_help_desk_student_account
+
+- story: help desk student account change password
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_desk_student_account_changePass
+  - action: utter_help_desk_student_account_changePass
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: help desk new student account 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_desk_new_student_account
+  - action: utter_help_desk_new_student_account
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: help desk student account futher QA
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: help_desk_student_account_FA
+  - action: action_help_desk_student_account_FA
+
+- story: campus guide 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide
+  - action: action_campus_guide
+
+- story: campus guide main
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_main
+  - action: action_campus_guide_main
+
+- story: campus guide Singleton Park Campus
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_general_SingletonParkCampus
+  - action: utter_campus_guide_general_SingletonParkCampus
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+
+- story: campus guide Bsy Campus
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_general_BayCampus
+  - action: utter_campus_guide_general_BayCampus
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: campus guide colleges
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: colleges
+  - action: action_colleges
+
+- story: campus guide CS
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_colleges_CS
+  - action: utter_campus_guide_colleges_CS
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: campus guide Medical
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_colleges_Medical
+  - action: utter_campus_guide_colleges_Medical 
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: campus guide law
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_colleges_law
+  - action: utter_campus_guide_colleges_law  
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: campus guide HHS
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_colleges_HHS
+  - action: utter_campus_guide_colleges_HHS  
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy  
+
+- story: campus guide E
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_colleges_E
+  - action: utter_campus_guide_colleges_E  
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: campus guide M
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_colleges_M
+  - action: utter_campus_guide_colleges_M    
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: campus guide AH
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_colleges_AH
+  - action: utter_campus_guide_colleges_AH 
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: campus guide accommodation
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_accommodation
+  - action: action_campus_guide_accommodation
+
+- story: campus guide accommodation singletone
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_accommodation_singleton
+  - action: utter_campus_guide_accommodation_singleton
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: campus guide accommodation beckhouse
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_accommodation_Beckhouse
+  - action: utter_campus_guide_accommodation_Beckhouse
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: campus guide accommodation bay
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_accommodation_bay
+  - action: utter_campus_guide_accommodation_bay
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: campus guide accommodation Hendrefoilan
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_accommodation_Hendrefoilan
+  - action: utter_campus_guide_accommodation_Hendrefoilan
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: campus guide accommodation Offcampus
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_accommodation_Offcampus
+  - action: utter_campus_guide_accommodation_Offcampus
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: campus guide libraries
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_libraries
+  - action: action_campus_guide_libraries
+
+- story: campus guide libraries singleton
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_libraries_singleton
+  - action: utter_campus_guide_libraries_singleton
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: campus guide libraries bay
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_libraries_bay
+  - action: utter_campus_guide_libraries_bay
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: campus guide libraries St
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_libraries_St
+  - action: utter_campus_guide_libraries_St
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: campus guide libraries SWM
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_libraries_SWM
+  - action: utter_campus_guide_libraries_SWM
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: campus guide libraries Banwen
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: campus_guide_libraries_Banwen
+  - action: utter_campus_guide_libraries_Banwen
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: certificate
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: certificate
+  - action: utter_certificate
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: transcript
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: transcript
+  - action: utter_transcript
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: course enroll student account marks
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: course_enroll
+  - action: action_course_enroll
+  - intent: course_enroll_my_Acc
+  - action: action_course_enroll_my_Acc
+  - intent: course_enroll_my_Acc_marks
+  - action: utter_course_enroll_my_Acc_marks
+  - action: action_ask_un
+  - intent: user_submitted_un
+  - action: action_ask_password
+  - intent: user_submitted_password
+  - action: action_validate_credentials_and_display_marks
+
+- story: course enroll student account attendence 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: course_enroll
+  - action: action_course_enroll
+  - intent: course_enroll_my_Acc
+  - action: action_course_enroll_my_Acc
+  - intent: course_enroll_my_Acc_Attendence
+  - action: utter_course_enroll_my_Acc_Attendence
+  - action: action_ask_un
+  - intent: user_submitted_un
+  - action: action_ask_password
+  - intent: user_submitted_password
+  - action: action_validate_credentials_and_display_attendance
+
+- story: course enroll student account timetable
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: course_enroll
+  - action: action_course_enroll
+  - intent: course_enroll_my_Acc
+  - action: action_course_enroll_my_Acc
+  - intent: course_enroll_my_Acc_timetable
+  - action: utter_course_enroll_my_Acc_timetable
+  - action: action_ask_un
+  - intent: user_submitted_un
+  - action: action_ask_password
+  - intent: user_submitted_password
+  - action: action_course_enroll_my_Acc_timetable
+
+- story: timetable enroll 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: enrolltimetable
+  - action: utter_enrolltimetable
+
+- story: course enroll  
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: course_enroll
+  - action: action_course_enroll
+
+- story: course enroll general
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: course_enroll_general
+  - action: action_course_enroll_general
+
+- story: course enroll general undergraduate
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: course_enroll_general_undergraduate
+  - action: utter_course_enroll_general_undergraduate
+
+- story: course enroll general postgarduate
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: course_enroll_general_postgraduate
+  - action: utter_course_enroll_general_postgraduate
+
+- story: confirmation enroll  
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: enroll_confirmation
+  - action: utter_enroll_confirmation
+  
+- story: enroll before results
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: enroll_before_results
+  - action: utter_enroll_before_results
+
+- story: enroll online
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: enroll_online
+  - action: utter_enroll_online
+
+- story: resubmit work
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: resubmit_work
+  - action: utter_resubmit_work
+  
+- story: credits
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: credits
+  - action: utter_credits
+  
+- story: in person enroll
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inperson_enroll
+  - action: utter_inperson_enroll
+
+- story: Quarntine
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Quarntine
+  - action: utter_Quarntine
+
+- story: Vaccine
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Vaccine
+  - action: utter_Vaccine
+ 
+- story: student engagement COVID19
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: student_engagement
+  - action: utter_student_engagement
+
+- story: health and safety COVID19
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: health_safety
+  - action: utter_health_safety
+
+- story: PCR test
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: test
+  - action: utter_test
+
+- story: positive covid results
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: positive_results
+  - action: utter_positive_results
+
+- story: Financial aid
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid
+  - action: action_Financial_aid
+  
+- story: Financial Management
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid_FinancialManagement
+  - action: utter_Financial_aid_FinancialManagement
+  
+- story: Financial Documents
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid_FinancialDocuments
+  - action: utter_Financial_aid_FinancialDocuments
+
+- story: Financial income
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid_Income
+  - action: utter_Financial_aid_Income
+
+- story: Financial Payments
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid_Payments
+  - action: utter_Financial_aid_Payments
+
+- story: Financial payroll
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid_Payroll
+  - action: utter_Financial_aid_Payroll
+
+- story: Financial tax
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid_tax
+  - action: utter_Financial_aid_tax
+  
+- story: Financial tuitionFees
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid_tuitionFees
+  - action: action_Financial_aid_tuitionFees
+
+- story: Financial pay fees
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid_pay_fees
+  - action: action_Financial_aid_pay_fees
+
+- story: Financial pay fees International
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid_pay_fees_International
+  - action: utter_Financial_aid_pay_fees_International
+
+- story: Financial pay fees Undergraduate
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid_pay_fees_Undergraduate
+  - action: utter_Financial_aid_pay_fees_Undergraduate
+
+- story: Financial pay fees Postgraduate
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid_pay_fees_Postgraduate
+  - action: utter_Financial_aid_pay_fees_Postgraduate
+
+- story: Financial Office Dropin
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid_tuitionFees_OfficeDropin
+  - action: utter_Financial_aid_tuitionFees_OfficeDropin
+
+- story: Financial Student Debt Policy
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid_tuitionFees_StudentDebtPolicy
+  - action: utter_Financial_aid_tuitionFees_StudentDebtPolicy
+
+- story: Financial Refunds
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid_tuitionFees_Refunds
+  - action: utter_Financial_aid_tuitionFees_Refunds
+
+- story: Scholarships
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Scholarships
+  - action: action_Scholarships
+
+- story: Scholarships International
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Scholarships_International
+  - action: utter_Scholarships_International
+
+- story: Scholarships Undergraduate
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Scholarships_Undergraduate
+  - action: utter_Scholarships_Undergraduate
+
+- story: Scholarships Postgraduate
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Scholarships_Postgraduate
+  - action: utter_Scholarships_Postgraduate
+
+- story: transport
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: transport
+  - action: utter_transport
+
+- story: termdates
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: termdates
+  - action: action_termdates
+
+- story: lostItem
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: lostItem
+  - action: utter_lostItem
+
+- story: IDcard
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: IDcard
+  - action: utter_IDcard
+
+- story: prospectus
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: prospectus
+  - action: utter_prospectus
+
+- story: parking
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: parking
+  - action: utter_parking
+
+- story: Financial funding
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid_funding
+  - action: action_Financial_aid_funding
+
+- story: Financial undergraduate funding
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid_UndergradFunding
+  - action: utter_Financial_aid_UndergradFunding
+
+- story: Financial postgraduate funding
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Financial_aid_PostgradFunding
+  - action: utter_Financial_aid_PostgradFunding
+
+- story: uncorrect fees
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: uncorrectfees
+  - action: utter_uncorrectfees
