@@ -3,9 +3,9 @@ ENTRYPOINT []
 RUN apt-get update && apt-get install -y python3 python3-pip && python3 -m pip install --no-cache --upgrade pip && pip3 install --no-cache rasa==2.3.4
 WORKDIR /ChatbotUni
 
-ADD requirements.txt .
+# ADD requirements.txt .
 
-RUN pip install -r requirements.txt --no-cache-dir
+# RUN pip install -r requirements.txt --no-cache-dir
 
 COPY . /ChatbotUni/
 
