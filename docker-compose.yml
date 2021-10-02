@@ -8,6 +8,6 @@ services:
             - ./:/ChatbotUni
         command:
             - run
-    app:
+    ChatbotUni:
         image: <image:tag>
         expose: 5055
