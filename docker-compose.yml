@@ -5,9 +5,9 @@ services:
         ports:
             - 5005:5005
         volumes:
-            - ./:/ChatbotUni
+            - ./:/app
         command:
             - run
-    ChatbotUni:
+    app:
         image: <image:tag>
         expose: 5055
