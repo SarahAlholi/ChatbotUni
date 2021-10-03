@@ -18,9 +18,10 @@
 # EXPOSE 5005
 
 # CMD python3 actions/actions.py -d models -u models --port $PORT -o log_file.log
+FROM ubuntu:18.04
 FROM rasa/rasa_core_sdk:latest
 FROM python:3.7-slim
-From ubuntu 16.4.6
+
 
 RUN python -m pip install rasa
 # RUN python3 -m http.server
