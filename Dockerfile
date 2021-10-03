@@ -84,7 +84,7 @@ FROM rasa/rasa:2.7.1
 WORKDIR  '/app'
 COPY . .
 USER root
-
+RUN pip --no-cache-dir install requests
 RUN  rasa train 
 
 VOLUME /app/models
