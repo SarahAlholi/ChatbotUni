@@ -20,6 +20,7 @@
 # CMD python3 actions/actions.py -d models -u models --port $PORT -o log_file.log
 
 # use a python container as a starting point
+FROM rasa/rasa
 FROM python:3.7.7-slim
 
 # install dependencies of interest
