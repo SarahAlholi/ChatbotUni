@@ -1,6 +1,5 @@
 FROM ubuntu:18.04
 FROM rasa/rasa-sdk:1.8.1 
-USER root
 
 RUN pip --no-cache-dir install requests
 USER 1001
