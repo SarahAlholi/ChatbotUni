@@ -21,7 +21,7 @@
 
 FROM python:3.7-slim
 
-RUN python -m pip install rasa
+RUN python3 -m pip install rasa
 # RUN python3 -m http.server
 
 WORKDIR /app
