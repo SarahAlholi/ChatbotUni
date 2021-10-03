@@ -20,7 +20,7 @@
 # CMD python3 actions/actions.py -d models -u models --port $PORT -o log_file.log
 
 # use a python container as a starting point
-FROM python3:3.7.7-slim
+FROM python:3.7.7-slim
 
 # install dependencies of interest
 RUN python3 -m pip install rasa[spacy] && \
