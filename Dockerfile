@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 FROM rasa/rasa-sdk:1.8.1 
 
 RUN pip --no-cache-dir install requests
-RUN python -m pip3 install rasa
+RUN python -m pip install rasa
 
 USER 1001
 
