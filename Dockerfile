@@ -81,10 +81,12 @@
 
 
 FROM rasa/rasa:2.7.1
+FROM python:3.8-slim
 WORKDIR  '/app'
 COPY . .
 USER root
 RUN pip --no-cache-dir install requests
+RUN python -m pip install rasa
 RUN  rasa train 
 
 VOLUME /app/models
