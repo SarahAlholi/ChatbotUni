@@ -18,28 +18,56 @@
 # EXPOSE 5005
 
 # CMD python3 actions/actions.py -d models -u models --port $PORT -o log_file.log
-FROM ubuntu:18.04
-FROM rasa/rasa_core_sdk:latest
+
+# use a python container as a starting point
 FROM python:3.7-slim
 
+# install dependencies of interest
+RUN python -m pip install rasa[spacy] && \
+    python -m spacy download en_core_web_lg
 
-RUN python -m pip install rasa
-# RUN python3 -m http.server
-
+# set workdir and copy data files from disk
+# note the latter command uses .dockerignore
 WORKDIR /app
+ENV HOME=/app
 COPY . .
-COPY index.html /
-COPY server.sh /app/server.sh
 
-RUN rasa train 
+# train a new rasa model
+RUN rasa train nlu
 
-RUN chmod a+rwx /app/server.sh
+# set the user to run, don't run as root
 USER 1001
 
-ENTRYPOINT [ "rasa" ]
-EXPOSE 5005
+# set entrypoint for interactive shells
+ENTRYPOINT ["rasa"]
 
-CMD [ "run","--enable-api","--port","5005" ]
+# command to run when container is called to run
+CMD ["run", "--enable-api", "--port", "8080"]
+
+
+
+# FROM ubuntu:18.04
+# FROM rasa/rasa_core_sdk:latest
+# FROM python:3.7-slim
+
+
+# RUN python -m pip install rasa
+# # RUN python3 -m http.server
+
+# WORKDIR /app
+# COPY . .
+# COPY index.html /
+# COPY server.sh /app/server.sh
+
+# RUN rasa train 
+
+# RUN chmod a+rwx /app/server.sh
+# USER 1001
+
+# ENTRYPOINT [ "rasa" ]
+# EXPOSE 5005
+
+# CMD [ "run","--enable-api","--port","5005" ]
 
 
 
