@@ -20,7 +20,13 @@
 # CMD python3 actions/actions.py -d models -u models --port $PORT -o log_file.log
 
 # use a python container as a starting point
-FROM rasa/rasa
+# Extend the official Rasa SDK image
+FROM rasa/rasa-sdk:latest
+USER root
+# Add a custom python library (e.g. jupyter)
+RUN pip --no-cache-dir install requests
+USER 1001
+
 FROM python:3.7.7-slim
 
 # install dependencies of interest
@@ -35,9 +41,6 @@ COPY . .
 
 # train a new rasa model
 RUN rasa train 
-
-# set the user to run, don't run as root
-USER root
 
 # set entrypoint for interactive shells
 ENTRYPOINT ["rasa"]
