@@ -23,8 +23,9 @@
 FROM python:3.7.7-slim
 
 # install dependencies of interest
-RUN python3 -m pip install rasa[spacy] && \
-    python3 -m spacy download en_core_web_lg
+RUN python -m pip3 install rasa
+# [spacy] && \
+#     python -m spacy download en_core_web_lg
 
 # set workdir and copy data files from disk
 # note the latter command uses .dockerignore
@@ -51,7 +52,7 @@ CMD ["run", "--enable-api", "--port", "8080"]
 # FROM python:3.7-slim
 
 
-# RUN python -m pip install rasa
+# RUN python -m pip3 install rasa
 # # RUN python3 -m http.server
 
 # WORKDIR /app
