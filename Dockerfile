@@ -20,11 +20,11 @@
 # CMD python3 actions/actions.py -d models -u models --port $PORT -o log_file.log
 
 # use a python container as a starting point
-FROM python:3.7.7-slim
+FROM python3:3.7.7-slim
 
 # install dependencies of interest
-RUN python -m pip install rasa[spacy] && \
-    python -m spacy download en_core_web_lg
+RUN python3 -m pip install rasa[spacy] && \
+    python3 -m spacy download en_core_web_lg
 
 # set workdir and copy data files from disk
 # note the latter command uses .dockerignore
