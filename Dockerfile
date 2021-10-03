@@ -21,13 +21,13 @@
 
 # use a python container as a starting point
 # Extend the official Rasa SDK image
-FROM rasa/rasa-sdk:latest
+FROM rasa/rasa-sdk:1.8.1 
 USER root
 # Add a custom python library (e.g. jupyter)
 RUN pip --no-cache-dir install requests
 USER 1001
 
-FROM python:3.7.7-slim
+FROM python:3.6-slim
 
 # install dependencies of interest
 RUN python -m pip install rasa[spacy] && \
